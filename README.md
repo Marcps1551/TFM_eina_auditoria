@@ -118,7 +118,7 @@ Flux d'ús:
 Només backend, des de `eina_auditoria_priv/`:
 
 ```powershell
-py -m eina_auditoria_priv.cli dades_exemple/auditoria_exemple.json -o informe
+py -m eina_auditoria_priv.cli dades_exemple/cas_mixt_3_tractaments.json -o informe
 ```
 
 Genera `informe.json`, `informe.txt` i `informe.html` a la carpeta actual.
@@ -147,15 +147,20 @@ La interfície **recomanada** és la de React (port 5173).
 
 ## Dades d'exemple
 
+Vegeu **[dades_exemple/README_DADES_EXEMPLE.md](dades_exemple/README_DADES_EXEMPLE.md)** per al comportament esperat, comandes CLI i comptadors de referència.
+
 | Fitxer | Propòsit |
 |--------|----------|
-| `dades_exemple/auditoria_un_no_compleix_tractament.json` | **Prova guiada:** General compleix (2/3) però T003 no — falta base legal |
-| `dades_exemple/auditoria_varietat_tractaments.json` | **Prova variada:** 10 tractaments amb compleix/no compleix diferents |
-| `dades_exemple/auditoria_exemple.json` | Cas d'exemple amb diversos tractaments |
-| `dades_exemple/auditoria_prova_real.json` | Escenari de prova realista |
-| `dades_exemple/exemple_ropa.json` | Importació ROPA |
+| `dades_exemple/cas_error_tractaments_no_llista.json` | **Error de validació:** `tractaments` no és una llista |
+| `dades_exemple/cas_dades_incompletes.json` | Dades incompletes; molts `no_compleix` |
+| `dades_exemple/cas_mixt_3_tractaments.json` | 3 tractaments; T003 sense base legal |
+| `dades_exemple/cas_checklist_per_tipus.json` | Checklist General i per tipus de dades |
+| `dades_exemple/auditoria_un_no_compleix_tractament.json` | **Prova guiada:** només T003 no compleix |
+| `dades_exemple/auditoria_varietat_tractaments.json` | 10 tractaments amb incidències diverses |
+| `dades_exemple/cas_import_ropa.json` | Importació ROPA (no JSON intern directe) |
+| `dades_exemple/tractaments_exemple.csv` | Import CSV (UI Flask, port 5000) |
 | `dades_exemple/plantilles/*.json` | Plantilles des del menú Inici |
-| `dades_exemple/proves/` | **Bateria de 31 proves** amb respostes esperades — vegeu [README_PROVES.md](README_PROVES.md) |
+| `dades_exemple/proves/` | **Bateria de 31 proves** — [README_PROVES.md](README_PROVES.md) |
 
 ---
 

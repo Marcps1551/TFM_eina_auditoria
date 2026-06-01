@@ -429,11 +429,11 @@ Estils a `static/style.css`.
 
 | Fitxer | Propòsit |
 |--------|----------|
-| `auditoria_exemple.json` | Cas «sa» amb empresa exemple i diversos tractaments |
-| `auditoria_prova_real.json` | Escenari realista de prova |
-| `auditoria_error_validacio.json` | JSON invàlid (`tractaments` com a objecte, no llista) |
-| `auditoria_error_suau_validacio.json` | Dades incompletes per provar validació |
-| `exemple_ropa.json` | Format ROPA-like en anglès per `POST /api/import/ropa` |
+| `cas_mixt_3_tractaments.json` | Cas clàssic: 3 tractaments (T003 sense base legal) |
+| `cas_checklist_per_tipus.json` | Escenari realista amb checklist per tipus |
+| `cas_error_tractaments_no_llista.json` | Error de validació: `tractaments` no és llista |
+| `cas_dades_incompletes.json` | Dades incompletes; molts incumpliments |
+| `cas_import_ropa.json` | Format ROPA-like per `POST /api/import/ropa` |
 
 ### CSV
 
@@ -448,7 +448,7 @@ Estils a `static/style.css`.
 | `exemple_complet.json` | Plantilla amb 5 tractaments i diversos tipus |
 | `petita_empresa_web.json` | PIME amb tractaments web |
 | `rrhh_nomines.json` | RRHH i nòmines |
-| `auditoria_prova_real.json` | Duplicat com a plantilla |
+| `auditoria_prova_real.json` | (Plantilla legacy; vegeu `cas_checklist_per_tipus.json`) |
 
 Cada plantilla conté `id`, `nom`, `descripcio` i `dades` (format `DadesEntradaAuditoria`).
 

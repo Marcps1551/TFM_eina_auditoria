@@ -1,4 +1,11 @@
 {
+  "_meta": {
+    "id": "auditoria_varietat_tractaments",
+    "nom": "Varietat: 10 tractaments amb incidències diverses",
+    "proposit": "Explorar pestanyes per tipus de dades i múltiples motius de no_compleix.",
+    "com_carregar": "py -m eina_auditoria_priv.cli dades_exemple/auditoria_varietat_tractaments.json --print",
+    "comportament_esperat": "T001 i T009 compleixen; T002-T008 i T010 amb incidències documentades a notes; política no actualitzada."
+  },
   "nom_organitzacio": "Grup Varietat S.L.",
   "data_auditoria": "2025-05-31",
   "tractaments": [
@@ -134,7 +141,7 @@
       "nom": "Analytics web i cookies",
       "finalitat": "Mesura d'audiència i estadístiques de navegació al lloc web",
       "base_legal": "consentiment",
-      "categories_dades": ["adreça_ip", "comportament_navegacio"],
+      "categories_dades": ["ip_navegacio", "cookies"],
       "destinataris": ["Google Analytics (EUA)", "Departament digital"],
       "transferencies_internacionals": true,
       "termini_conservacio": "14 mesos",
@@ -164,14 +171,12 @@
       "RGPD_ART5_PRINCIPIS": true,
       "RGPD_ART5_2_RESPONSABILITAT": true,
       "RGPD_ART7_CONSENTIMENT": true,
-      "RGPD_ART8_MENORS": false,
       "RGPD_ART12_MODALITATS": true,
       "RGPD_ART15_ACCES": true,
       "RGPD_ART17_SUPRESSIO": true,
       "RGPD_ART21_OBSECCIO": false,
       "RGPD_ART33_NOTIFICACIO_VIOLACIO": true,
       "RGPD_ART35_PIA": true,
-      "RGPD_ART28_PROCESSADOR": true,
       "ISO27701_A_6.4": true
     },
     "curriculums": {

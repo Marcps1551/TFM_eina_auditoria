@@ -1,4 +1,11 @@
 {
+  "_meta": {
+    "id": "auditoria_un_no_compleix_tractament",
+    "nom": "Un tractament no compleix (T003 sense base legal)",
+    "proposit": "Prova guiada: General parcialment verd, només T003 en vermell.",
+    "com_carregar": "py -m eina_auditoria_priv.cli dades_exemple/auditoria_un_no_compleix_tractament.json --print",
+    "comportament_esperat": "T001 i T002 compleixen; T003 no_compleix per RGPD_ART6_BASE_LEGAL."
+  },
   "nom_organitzacio": "Empresa Demo S.L.",
   "data_auditoria": "2025-05-31",
   "tractaments": [

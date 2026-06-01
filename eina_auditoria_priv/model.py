@@ -92,6 +92,55 @@ class ConfiguracioAcces:
         }
 
 
+class ValidacioDadesError(ValueError):
+    """Errors bloquejants en l'estructura del JSON d'entrada (abans de parsejar el model)."""
+
+    def __init__(self, errors: list[str]):
+        self.errors = errors
+        super().__init__("; ".join(errors))
+
+
+def validar_dict(d: dict) -> list[str]:
+    """
+    Valida l'estructura mínima del JSON d'auditoria.
+    Retorna llista d'errors (buida si és vàlid). Ignora la clau _meta (metadades del fitxer d'exemple).
+    """
+    if not isinstance(d, dict):
+        return ["L'arrel del JSON ha de ser un objecte."]
+    errors: list[str] = []
+    if "tractaments" in d:
+        tractaments_raw = d["tractaments"]
+        if tractaments_raw is None:
+            pass
+        elif not isinstance(tractaments_raw, list):
+            errors.append(
+                "El camp 'tractaments' ha de ser una llista d'activitats. "
+                "Si només hi ha un tractament, envolteu-lo en una llista: [ { ... } ]."
+            )
+        else:
+            for i, t in enumerate(tractaments_raw):
+                if not isinstance(t, dict):
+                    errors.append(f"tractaments[{i}] ha de ser un objecte, no {type(t).__name__}.")
+    pp = d.get("politica_privacitat")
+    if pp is not None and not isinstance(pp, dict):
+        errors.append("El camp 'politica_privacitat' ha de ser un objecte o null.")
+    ca = d.get("configuracio_acces")
+    if ca is not None and not isinstance(ca, dict):
+        errors.append("El camp 'configuracio_acces' ha de ser un objecte o null.")
+    raw_checklist = d.get("checklist_controls")
+    if raw_checklist is not None and not isinstance(raw_checklist, dict):
+        errors.append("El camp 'checklist_controls' ha de ser un objecte o null.")
+    return errors
+
+
+def carregar_des_de_dict(d: dict) -> "DadesEntradaAuditoria":
+    """Valida i construeix DadesEntradaAuditoria; llença ValidacioDadesError si l'estructura no és vàlida."""
+    errors = validar_dict(d)
+    if errors:
+        raise ValidacioDadesError(errors)
+    return DadesEntradaAuditoria.from_dict(d)
+
+
 @dataclass
 class DadesEntradaAuditoria:
     """Conjunt de dades d'entrada per a una auditoria."""

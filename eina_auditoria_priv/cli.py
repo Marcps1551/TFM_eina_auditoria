@@ -8,7 +8,7 @@ import sys
 from pathlib import Path
 
 from . import __version__
-from .model import DadesEntradaAuditoria
+from .model import DadesEntradaAuditoria, ValidacioDadesError, carregar_des_de_dict
 from .evaluator import avaluar
 from .recommendations import generar_recomanacions
 from .reports import exportar_json, exportar_text, exportar_html
@@ -54,7 +54,7 @@ def main() -> int:
 
     if not args.entrada:
         parser.print_help()
-        print("\nExemple: python -m eina_auditoria_priv.cli dades_exemple/auditoria_exemple.json -o informe")
+        print("\nExemple: python -m eina_auditoria_priv.cli dades_exemple/cas_mixt_3_tractaments.json -o informe")
         return 0
 
     path_entrada = Path(args.entrada)
@@ -70,7 +70,11 @@ def main() -> int:
         return 1
 
     try:
-        dades = DadesEntradaAuditoria.from_dict(dades_dict)
+        dades = carregar_des_de_dict(dades_dict)
+    except ValidacioDadesError as e:
+        for err in e.errors:
+            print(f"Error de validació: {err}", file=sys.stderr)
+        return 1
     except Exception as e:
         print(f"Error interpretant les dades d'entrada: {e}", file=sys.stderr)
         return 1

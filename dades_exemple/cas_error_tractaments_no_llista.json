@@ -1,4 +1,11 @@
 {
+  "_meta": {
+    "id": "cas_error_tractaments_no_llista",
+    "nom": "Error de format: tractaments no és una llista",
+    "proposit": "Demostrar que la càrrega falla quan tractaments és un objecte en lloc d'un array.",
+    "com_carregar": "Importar JSON a Inici o: py -m eina_auditoria_priv.cli dades_exemple/cas_error_tractaments_no_llista.json",
+    "comportament_esperat": "Error de validació: «El camp tractaments ha de ser una llista». No s'executa l'auditoria."
+  },
   "nom_organitzacio": "",
   "data_auditoria": "2026-04-27",
   "tractaments": {

@@ -1,4 +1,11 @@
 {
+  "_meta": {
+    "id": "cas_import_ropa",
+    "nom": "Import ROPA (format anglès / UROPA-like)",
+    "proposit": "No és format intern directe: cal Importar ROPA a la UI o POST /api/import/ropa.",
+    "com_carregar": "React Inici → Importar ROPA (no usar Importar JSON)",
+    "comportament_esperat": "3 tractaments importats; sense política ni accés; T002 transferència internacional sense contractes documentats."
+  },
   "organisation": "Empresa Prova S.L.",
   "lastUpdated": "2025-03-15",
   "processingActivities": [

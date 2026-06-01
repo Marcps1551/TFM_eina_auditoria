@@ -263,7 +263,7 @@ En avaluar per tipus, es fusiona `General` + el dict del tipus concret.
 |-----------------|----------------------------------|
 | `auditoria_un_no_compleix_tractament.json` | Equivalent conceptual a la prova **04** |
 | `auditoria_varietat_tractaments.json` | Similar a la prova **31** (més tractaments) |
-| `auditoria_exemple.json` | Cas general d'ús, no duplicat a `proves/` |
+| `cas_mixt_3_tractaments.json` | Cas general d'ús, no duplicat a `proves/` — vegeu [dades_exemple/README_DADES_EXEMPLE.md](dades_exemple/README_DADES_EXEMPLE.md) |
 
 ---
 

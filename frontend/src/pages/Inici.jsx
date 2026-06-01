@@ -1,7 +1,7 @@
 import { useNavigate } from 'react-router-dom'
 import { useRef, useState, useEffect } from 'react'
 import { useDades } from '../context'
-import { getPlantilla, importRopa } from '../api'
+import { getPlantilla, importRopa, validarDades } from '../api'
 
 /**
  * Pàgina d'inici: importació de JSON, ROPA, selecció de plantilles o començar des de zero.
@@ -33,13 +33,16 @@ export default function Inici() {
     if (!f) return
     setError('')
     const reader = new FileReader()
-    reader.onload = () => {
+    reader.onload = async () => {
       try {
         const d = JSON.parse(reader.result)
+        setLoading(true)
+        await validarDades(d)
         loadDades(d)
         navigate('/dades')
       } catch (err) {
-        setError('JSON invàlid: ' + err.message)
+        setError(err.message || 'JSON invàlid')
+      } finally {
         setLoading(false)
       }
     }
@@ -97,7 +100,7 @@ export default function Inici() {
             onChange={handleFileJson}
           />
           <div className="font-medium text-slate-900 mb-1">Importar JSON</div>
-          <p className="text-sm text-slate-500">Fitxer en format intern de l'eina (auditoria_exemple.json)</p>
+          <p className="text-sm text-slate-500">Fitxer en format intern (p. ex. cas_mixt_3_tractaments.json)</p>
           <button
             type="button"
             onClick={() => fileJsonRef.current?.click()}

@@ -12,7 +12,7 @@ from datetime import datetime
 
 from flask import Blueprint, request, jsonify, send_file, Response
 
-from .model import DadesEntradaAuditoria
+from .model import DadesEntradaAuditoria, ValidacioDadesError, carregar_des_de_dict
 from .criteria import get_checklist_metadata
 from .constants import (
     MESURES_SEGURETAT_PREDEFINIDES,
@@ -77,8 +77,7 @@ def get_plantilla(plantilla_id: str):
                 dades = data.get("dades", data)
                 if "dades" in data:
                     dades = data["dades"]
-                # Assegurar format vàlid
-                DadesEntradaAuditoria.from_dict(dades)
+                carregar_des_de_dict(dades)
                 return jsonify(dades)
         except (json.JSONDecodeError, OSError, Exception):
             continue
@@ -120,9 +119,10 @@ def import_ropa():
         if not body:
             return jsonify({"error": "JSON invàlid o buit"}), 400
         internal = ropa_to_internal(body)
-        # Validar que el model ho accepta
-        DadesEntradaAuditoria.from_dict(internal)
+        carregar_des_de_dict(internal)
         return jsonify(internal)
+    except ValidacioDadesError as e:
+        return jsonify({"error": "; ".join(e.errors)}), 400
     except Exception as e:
         return jsonify({"error": str(e)}), 400
 
@@ -134,12 +134,13 @@ def post_dades():
         d = request.get_json(force=True, silent=True)
         if not d:
             return jsonify({"error": "JSON invàlid o buit"}), 400
-        DadesEntradaAuditoria.from_dict(d)
-        # Opcional: desar a sessió per executar després (usant session_id al body o header)
+        carregar_des_de_dict(d)
         session_id = request.headers.get("X-Session-Id") or request.json.get("_session_id")
         if session_id:
             _dades_session[session_id] = d
         return jsonify({"ok": True})
+    except ValidacioDadesError as e:
+        return jsonify({"ok": False, "error": "; ".join(e.errors)}), 400
     except Exception as e:
         return jsonify({"ok": False, "error": str(e)}), 400
 
@@ -257,7 +258,7 @@ def executar_auditoria():
         d = request.get_json(force=True, silent=True)
         if not d:
             return jsonify({"error": "Cal enviar les dades d'auditoria en JSON"}), 400
-        dades = DadesEntradaAuditoria.from_dict(d)
+        dades = carregar_des_de_dict(d)
         inf_dict = _build_informe(dades)
         inf_dict["dades_guardades"] = d
         informe_id = str(uuid.uuid4())
@@ -265,6 +266,9 @@ def executar_auditoria():
         payload = {"informe_id": informe_id, "informe": inf_dict}
         body = json.dumps(payload, default=_json_serializable, ensure_ascii=False)
         return Response(body, status=200, mimetype="application/json; charset=utf-8")
+    except ValidacioDadesError as e:
+        err_body = json.dumps({"error": "; ".join(e.errors)}, ensure_ascii=False)
+        return Response(err_body, status=400, mimetype="application/json; charset=utf-8")
     except Exception as e:
         tb = traceback.format_exc()
         try:

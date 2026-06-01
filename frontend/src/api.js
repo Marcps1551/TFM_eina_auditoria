@@ -18,6 +18,18 @@ export async function getPlantilla(id) {
   return r.json()
 }
 
+/** @param {object} dades DadesEntradaAuditoria @returns {Promise<{ok: boolean}>} */
+export async function validarDades(dades) {
+  const r = await fetch(`${BASE}/dades`, {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify(dades),
+  })
+  const data = await r.json().catch(() => ({}))
+  if (!r.ok) throw new Error(data.error || 'Error validant les dades')
+  return data
+}
+
 /** @param {object} json JSON tipus ROPA @returns {Promise<object>} Dades en format intern. */
 export async function importRopa(json) {
   const r = await fetch(`${BASE}/import/ropa`, {

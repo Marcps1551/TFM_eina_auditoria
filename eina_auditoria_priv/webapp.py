@@ -22,7 +22,14 @@ from flask import (
 )
 from werkzeug.utils import secure_filename
 
-from .model import DadesEntradaAuditoria, Tractament, PoliticaPrivacitat, ConfiguracioAcces
+from .model import (
+    DadesEntradaAuditoria,
+    Tractament,
+    PoliticaPrivacitat,
+    ConfiguracioAcces,
+    ValidacioDadesError,
+    carregar_des_de_dict,
+)
 from .csv_import import (
     llegir_csv_raw,
     construir_tractaments_des_de_csv,
@@ -84,7 +91,10 @@ def create_app() -> Flask:
             flash(f"Error llegint el JSON: {e}", "error")
             return redirect(url_for("importar_json"))
         try:
-            DadesEntradaAuditoria.from_dict(d)
+            carregar_des_de_dict(d)
+        except ValidacioDadesError as e:
+            flash(f"Format no vàlid: {'; '.join(e.errors)}", "error")
+            return redirect(url_for("importar_json"))
         except Exception as e:
             flash(f"Format no vàlid: {e}", "error")
             return redirect(url_for("importar_json"))
@@ -212,7 +222,10 @@ def create_app() -> Flask:
             flash("No hi ha dades. Importeu JSON/CSV o introduïu les dades.", "error")
             return redirect(url_for("index"))
         try:
-            dades = DadesEntradaAuditoria.from_dict(d)
+            dades = carregar_des_de_dict(d)
+        except ValidacioDadesError as e:
+            flash(f"Error en les dades: {'; '.join(e.errors)}", "error")
+            return redirect(url_for("dades"))
         except Exception as e:
             flash(f"Error en les dades: {e}", "error")
             return redirect(url_for("dades"))

@@ -1,4 +1,11 @@
 {
+  "_meta": {
+    "id": "cas_mixt_3_tractaments",
+    "nom": "Mixt: 3 tractaments (T003 sense base legal)",
+    "proposit": "Cas clàssic d'ús: dos tractaments conformes i un amb falta de base legal.",
+    "com_carregar": "py -m eina_auditoria_priv.cli dades_exemple/cas_mixt_3_tractaments.json --print",
+    "comportament_esperat": "T001 i T002 compleixen; T003 no_compleix en RGPD_ART6_BASE_LEGAL i principis; política i accés OK."
+  },
   "nom_organitzacio": "Empresa Exemplar S.L.",
   "data_auditoria": "2025-02-24",
   "tractaments": [

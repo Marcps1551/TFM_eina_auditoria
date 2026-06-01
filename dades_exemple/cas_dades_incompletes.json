@@ -1,4 +1,11 @@
 {
+  "_meta": {
+    "id": "cas_dades_incompletes",
+    "nom": "Dades incompletes (incumpliments múltiples)",
+    "proposit": "Carrega vàlida però amb camps clau buits i política inexistent; genera molts no_compleix.",
+    "com_carregar": "py -m eina_auditoria_priv.cli dades_exemple/cas_dades_incompletes.json --print",
+    "comportament_esperat": "Molts no_compleix: sense base legal, termini, mesures, política, accés; veure README_DADES_EXEMPLE.md per comptadors de referència."
+  },
   "nom_organitzacio": "Empresa Prova Validacio",
   "data_auditoria": "2026-04-27",
   "tractaments": [
@@ -7,7 +14,7 @@
       "nom": "Gestio de candidatures",
       "finalitat": "Seleccio de personal",
       "base_legal": "",
-      "categories_dades": ["dades_identificatives", "curriculum"],
+      "categories_dades": ["curriculum", "dades_contacte"],
       "destinataris": [],
       "transferencies_internacionals": false,
       "termini_conservacio": "",
