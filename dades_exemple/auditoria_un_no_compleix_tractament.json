@@ -1,0 +1,69 @@
+{
+  "nom_organitzacio": "Empresa Demo S.L.",
+  "data_auditoria": "2025-05-31",
+  "tractaments": [
+    {
+      "id": "T001",
+      "nom": "Gestió de nòmines",
+      "finalitat": "Processament de nòmines i obligacions laborals i fiscals",
+      "base_legal": "obligacio_legal",
+      "categories_dades": ["dades_laborals", "dades_economiques"],
+      "destinataris": ["Gestoria externa", "Seguretat Social"],
+      "transferencies_internacionals": false,
+      "termini_conservacio": "4 anys",
+      "mesures_seguretat": ["acces_restringit_rol", "xifrat", "copies_seguretat"],
+      "dpo_assignat": true,
+      "tipus_dades": "treballadors",
+      "notes": "Tractament correcte — serveix de referència."
+    },
+    {
+      "id": "T002",
+      "nom": "Newsletter comercial",
+      "finalitat": "Enviament de comunicacions comercials amb consentiment previ",
+      "base_legal": "consentiment",
+      "categories_dades": ["email", "nom"],
+      "destinataris": ["Proveïdor de correu"],
+      "transferencies_internacionals": false,
+      "termini_conservacio": "fins_renovacio",
+      "mesures_seguretat": ["acces_restringit_rol", "link_baixa", "registre_consentiments"],
+      "dpo_assignat": true,
+      "tipus_dades": "màrqueting",
+      "notes": "Tractament correcte — serveix de referència."
+    },
+    {
+      "id": "T003",
+      "nom": "Recepció de candidatures",
+      "finalitat": "Gestió de candidatures i currículums rebuts per a selecció de personal",
+      "base_legal": "",
+      "categories_dades": ["curriculum", "dades_contacte"],
+      "destinataris": ["RRHH"],
+      "transferencies_internacionals": false,
+      "termini_conservacio": "1 any",
+      "mesures_seguretat": ["acces_restringit_rol", "copies_seguretat"],
+      "dpo_assignat": true,
+      "tipus_dades": "curriculums",
+      "notes": "INCUMPLIMENT DE PROVA: aquest tractament no té base legal indicada (RGPD art. 6). T001 i T002 compleixen."
+    }
+  ],
+  "politica_privacitat": {
+    "existeix": true,
+    "accessible": true,
+    "contingut_deure_informacio": true,
+    "actualitzada": true,
+    "idiomes": ["ca", "es"],
+    "notes": "Política publicada a la web corporativa."
+  },
+  "configuracio_acces": {
+    "acces_restringit_per_rol": true,
+    "registre_accions": true,
+    "formacio_obligatoria": true,
+    "confidencialitat_contractual": true,
+    "notes": ""
+  },
+  "checklist_controls": {
+    "General": {
+      "RGPD_ART5_PRINCIPIS": true
+    }
+  },
+  "altres_notes": "Exemple de prova: General compleix, un tractament concret no. T001 i T002 compleixen; T003 no té base legal. A l'informe: pestanya «Generals» → Base legal en verd (2 de 3 compleixen) + política i accés en verd; pestanya «curriculums» → només T003 en vermell; pestanya «Totals» → ambdós (General verd + T003 vermell)."
+}

@@ -1,0 +1,37 @@
+{
+  "nom_organitzacio": "Empresa Sense Traçabilitat",
+  "data_auditoria": "2025-05-31",
+  "tractaments": [
+    {
+      "id": "T001",
+      "nom": "Gestió de clients",
+      "finalitat": "Atenció i seguiment comercial de clients",
+      "base_legal": "execucio_contracte",
+      "categories_dades": ["nom", "email", "telefon"],
+      "destinataris": ["Comercial"],
+      "transferencies_internacionals": false,
+      "termini_conservacio": "5 anys",
+      "mesures_seguretat": ["acces_restringit_rol", "xifrat"],
+      "dpo_assignat": true,
+      "tipus_dades": "clients",
+      "notes": ""
+    }
+  ],
+  "politica_privacitat": {
+    "existeix": true,
+    "accessible": true,
+    "contingut_deure_informacio": true,
+    "actualitzada": true,
+    "idiomes": ["ca"],
+    "notes": ""
+  },
+  "configuracio_acces": {
+    "acces_restringit_per_rol": true,
+    "registre_accions": false,
+    "formacio_obligatoria": true,
+    "confidencialitat_contractual": true,
+    "notes": "No hi ha registre d'accions sobre dades personals."
+  },
+  "checklist_controls": {},
+  "altres_notes": "Casuística 16: sense registre d'accions. Esperat: NO_COMPLEIX en REGISTRE_ACCIONS i RGPD_ART5_2_RESPONSABILITAT."
+}

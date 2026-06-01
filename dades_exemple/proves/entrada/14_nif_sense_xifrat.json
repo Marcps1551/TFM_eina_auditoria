@@ -1,0 +1,37 @@
+{
+  "nom_organitzacio": "Empresa NIF Sense Xifrat",
+  "data_auditoria": "2025-05-31",
+  "tractaments": [
+    {
+      "id": "T001",
+      "nom": "Fitxer fiscal",
+      "finalitat": "Gestió de dades fiscals i identificatives de clients",
+      "base_legal": "obligacio_legal",
+      "categories_dades": ["nif_nie", "dades_economiques", "dades_bancaries"],
+      "destinataris": ["Administració", "Hisenda"],
+      "transferencies_internacionals": false,
+      "termini_conservacio": "6 anys",
+      "mesures_seguretat": ["acces_restringit_rol", "copies_seguretat"],
+      "dpo_assignat": true,
+      "tipus_dades": "clients",
+      "notes": "INCUMPLIMENT: categories d'alt risc (NIF, bancàries) sense xifrat documentat."
+    }
+  ],
+  "politica_privacitat": {
+    "existeix": true,
+    "accessible": true,
+    "contingut_deure_informacio": true,
+    "actualitzada": true,
+    "idiomes": ["ca"],
+    "notes": ""
+  },
+  "configuracio_acces": {
+    "acces_restringit_per_rol": true,
+    "registre_accions": true,
+    "formacio_obligatoria": true,
+    "confidencialitat_contractual": true,
+    "notes": ""
+  },
+  "checklist_controls": {},
+  "altres_notes": "Casuística 14: NIF/dades bancàries sense xifrat documentat. El criteri automàtic RGPD_ART32_MESURES només comprova presència de mesures (n'hi ha). Esperat: COMPLEIX (0 no_compleix). La comprovació de xifrat per categories d'alt risc requereix el control RGPD_ART32_MESURES al checklist (no actiu per defecte)."
+}

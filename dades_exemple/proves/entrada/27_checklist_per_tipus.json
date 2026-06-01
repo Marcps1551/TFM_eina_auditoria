@@ -1,0 +1,63 @@
+{
+  "nom_organitzacio": "Empresa Checklist Per Tipus",
+  "data_auditoria": "2025-05-31",
+  "tractaments": [
+    {
+      "id": "T001",
+      "nom": "Nòmines",
+      "finalitat": "Gestió de nòmines",
+      "base_legal": "obligacio_legal",
+      "categories_dades": ["dades_laborals", "nif_nie"],
+      "destinataris": ["RRHH"],
+      "transferencies_internacionals": false,
+      "termini_conservacio": "4 anys",
+      "mesures_seguretat": ["acces_restringit_rol", "xifrat", "registre_acces"],
+      "dpo_assignat": true,
+      "tipus_dades": "treballadors",
+      "notes": ""
+    },
+    {
+      "id": "T002",
+      "nom": "Currículums",
+      "finalitat": "Selecció de personal",
+      "base_legal": "interes_legitim",
+      "categories_dades": ["curriculum", "dades_contacte"],
+      "destinataris": ["RRHH"],
+      "transferencies_internacionals": false,
+      "termini_conservacio": "1 any",
+      "mesures_seguretat": ["acces_restringit_rol", "supressio_programada"],
+      "dpo_assignat": true,
+      "tipus_dades": "curriculums",
+      "notes": ""
+    }
+  ],
+  "politica_privacitat": {
+    "existeix": true,
+    "accessible": true,
+    "contingut_deure_informacio": true,
+    "actualitzada": true,
+    "idiomes": ["ca"],
+    "notes": ""
+  },
+  "configuracio_acces": {
+    "acces_restringit_per_rol": true,
+    "registre_accions": true,
+    "formacio_obligatoria": true,
+    "confidencialitat_contractual": true,
+    "notes": ""
+  },
+  "checklist_controls": {
+    "General": {
+      "RGPD_ART15_ACCES": true,
+      "RGPD_ART17_SUPRESSIO": true
+    },
+    "curriculums": {
+      "RGPD_ART17_SUPRESSIO": false,
+      "RGPD_ART18_LIMITACIO": false
+    },
+    "treballadors": {
+      "RGPD_ART16_RECTIFICACIO": true
+    }
+  },
+  "altres_notes": "Casuística 27: checklist diferent per tipus de dades. Esperat: curriculums té NO_COMPLEIX en supressió/limitació; treballadors COMPLEIX en rectificació."
+}

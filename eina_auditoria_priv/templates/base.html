@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="ca">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{% block title %}Auditoria de privacitat{% endblock %} – TFM</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+  <header class="header">
+    <nav>
+      <a href="{{ url_for('index') }}">Inici</a>
+      <a href="{{ url_for('dades') }}">Dades</a>
+    </nav>
+    <h1>Eina d'auditoria de privacitat</h1>
+    <p class="subtitle">RGPD / LOPD-GDD</p>
+  </header>
+  <main class="main">
+    {% with messages = get_flashed_messages(with_categories=true) %}
+      {% if messages %}
+        <ul class="flashes">
+          {% for category, msg in messages %}
+            <li class="flash {{ category }}">{{ msg }}</li>
+          {% endfor %}
+        </ul>
+      {% endif %}
+    {% endwith %}
+    {% block content %}{% endblock %}
+  </main>
+  <footer class="footer">
+    Les recomanacions tenen caràcter orientatiu i no constitueixen assessorament jurídic.
+  </footer>
+</body>
+</html>

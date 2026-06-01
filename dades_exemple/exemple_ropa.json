@@ -1,0 +1,41 @@
+{
+  "organisation": "Empresa Prova S.L.",
+  "lastUpdated": "2025-03-15",
+  "processingActivities": [
+    {
+      "name": "Contractació i nòmines",
+      "purpose": "Gestió de dades de treballadors, contractes i nòmines per a obligacions laborals i fiscals",
+      "legalBasis": "obligacio_legal",
+      "categoriesOfPersonalData": ["dades d'empleat", "dades econòmiques", "NIF/NIE"],
+      "recipients": ["RRHH", "Gestoria", "Seguretat Social"],
+      "retentionPeriod": "4 anys",
+      "securityMeasures": ["accés restringit per rol", "xifrat", "còpies de seguretat"],
+      "internationalTransfers": false,
+      "dpoAssigned": true,
+      "category": "HR"
+    },
+    {
+      "name": "Newsletter i màrqueting",
+      "purpose": "Enviament de comunicacions comercials i newsletter",
+      "legalBasis": "consentiment",
+      "categoriesOfPersonalData": ["email", "nom", "preferències"],
+      "recipients": ["Màrqueting", "Proveïdor de mail"],
+      "retentionPeriod": "fins_renovacio",
+      "securityMeasures": ["registre de consentiments", "link de baixa"],
+      "internationalTransfers": true,
+      "dpoAssigned": true,
+      "category": "marketing"
+    },
+    {
+      "name": "Candidatures i currículums",
+      "purpose": "Gestió de candidatures i procés de selecció",
+      "legalBasis": "execucio_contracte",
+      "categoriesOfPersonalData": ["currículum", "dades de contacte", "formació", "experiència"],
+      "recipients": ["RRHH", "Cap d'àrea"],
+      "retentionPeriod": "1 any",
+      "securityMeasures": ["accés restringit", "supressió programada"],
+      "internationalTransfers": false,
+      "dpoAssigned": true
+    }
+  ]
+}

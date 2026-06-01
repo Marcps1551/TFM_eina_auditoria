@@ -1,0 +1,221 @@
+/* Eina d'auditoria de privacitat – Estils */
+
+:root {
+  --bg: #f0f4f8;
+  --card-bg: #fff;
+  --text: #1a202c;
+  --text-muted: #718096;
+  --primary: #2b6cb0;
+  --primary-hover: #2c5282;
+  --success: #276749;
+  --danger: #c53030;
+  --warning: #c05621;
+  --radius: 8px;
+  --shadow: 0 1px 3px rgba(0,0,0,.08);
+}
+
+* { box-sizing: border-box; }
+body {
+  font-family: system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.5;
+  margin: 0;
+  min-height: 100vh;
+}
+
+.header {
+  background: var(--card-bg);
+  padding: 1rem 1.5rem;
+  box-shadow: var(--shadow);
+}
+.header nav {
+  margin-bottom: 0.5rem;
+}
+.header nav a {
+  color: var(--primary);
+  text-decoration: none;
+  margin-right: 1rem;
+}
+.header nav a:hover { text-decoration: underline; }
+.header h1 { margin: 0 0 0.25rem 0; font-size: 1.35rem; }
+.subtitle { margin: 0; color: var(--text-muted); font-size: 0.9rem; }
+
+.main { padding: 1.5rem; max-width: 900px; margin: 0 auto; }
+
+.flashes { list-style: none; padding: 0; margin: 0 0 1rem 0; }
+.flash { padding: 0.75rem 1rem; border-radius: var(--radius); margin-bottom: 0.5rem; }
+.flash.error { background: #fed7d7; color: #742a2a; }
+.flash.message, .flash.success { background: #c6f6d5; color: #22543d; }
+
+.card {
+  background: var(--card-bg);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  padding: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+.card h2 { margin-top: 0; font-size: 1.25rem; }
+.card h3 { margin: 1.25rem 0 0.75rem 0; font-size: 1.05rem; }
+.info-box { background: #ebf8ff; border-left: 4px solid var(--primary); }
+.info-box ul { margin: 0.5rem 0; padding-left: 1.25rem; }
+.info-box li { margin-bottom: 0.35rem; }
+
+.actions { display: flex; flex-wrap: wrap; gap: 0.75rem; margin: 1rem 0; }
+.btn {
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  text-decoration: none;
+  font-size: 0.95rem;
+  border: none;
+  cursor: pointer;
+}
+.btn-primary { background: var(--primary); color: #fff; }
+.btn-primary:hover { background: var(--primary-hover); }
+.btn-secondary { background: #e2e8f0; color: var(--text); }
+.btn-secondary:hover { background: #cbd5e0; }
+
+.form-upload label, .form-group label { display: block; margin-bottom: 0.25rem; font-weight: 500; }
+.form-upload input[type=file], .form-group input, .form-group textarea {
+  margin-bottom: 1rem;
+  padding: 0.5rem;
+  width: 100%;
+  max-width: 400px;
+  border: 1px solid #cbd5e0;
+  border-radius: 6px;
+}
+.form-upload button, .form-actions button { margin-top: 0.5rem; }
+.checkboxes { margin: 0.5rem 0 1rem 0; }
+.checkboxes label { display: block; margin-bottom: 0.5rem; cursor: pointer; }
+.checkboxes input { margin-right: 0.5rem; }
+
+.table-wrap { overflow-x: auto; margin: 1rem 0; }
+.preview-table, .data-table, .mapping-table { width: 100%; border-collapse: collapse; font-size: 0.9rem; }
+.preview-table th, .preview-table td, .data-table th, .data-table td, .mapping-table th, .mapping-table td {
+  padding: 0.5rem 0.75rem;
+  border: 1px solid #e2e8f0;
+  text-align: left;
+}
+.preview-table th, .data-table th, .mapping-table th { background: #f7fafc; font-weight: 600; }
+.mapping-table select { width: 100%; padding: 0.35rem; }
+
+.findings, .riscos, .recomanacions { list-style: none; padding: 0; margin: 0; }
+.finding, .risc, .recomanacio {
+  margin: 0.75rem 0;
+  padding: 1rem;
+  border-radius: var(--radius);
+  background: #f8fafc;
+  border-left: 4px solid #cbd5e0;
+}
+.finding-compleix { border-left-color: var(--success); }
+.finding-no_compleix { border-left-color: var(--danger); }
+.risc-alt { border-left-color: var(--danger); }
+.risc-mitja { border-left-color: var(--warning); }
+.risc-baix { border-left-color: var(--success); }
+.desc { color: var(--text-muted); font-size: 0.95rem; }
+.accions { margin: 0.5rem 0 0 1rem; padding-left: 1rem; font-size: 0.9rem; color: var(--text-muted); }
+
+.resum-badges, .descarregues { margin: 1rem 0; }
+.badge {
+  display: inline-block;
+  padding: 0.25rem 0.5rem;
+  border-radius: 4px;
+  font-size: 0.85rem;
+  margin-right: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+.badge-compleix { background: #c6f6d5; color: #22543d; }
+.badge-no_compleix { background: #fed7d7; color: #742a2a; }
+.badge-sense_dades { background: #e2e8f0; color: #4a5568; }
+.badge-risc-alt { background: #fed7d7; }
+.badge-risc-mitja { background: #feebc8; }
+.badge-risc-baix { background: #c6f6d5; }
+
+.meta { color: var(--text-muted); margin-bottom: 1rem; }
+.muted { color: var(--text-muted); font-size: 0.95rem; }
+code { background: #edf2f7; padding: 0.15rem 0.4rem; border-radius: 4px; font-size: 0.9em; }
+
+.footer {
+  text-align: center;
+  padding: 1.5rem;
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  border-top: 1px solid #e2e8f0;
+}
+
+/* Pestanyes per tipus de dades (informe) */
+.informe-header { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: flex-start; gap: 1rem; margin-bottom: 0.5rem; }
+.descarregues-inline { display: flex; gap: 0.5rem; }
+.btn-sm { padding: 0.35rem 0.75rem; font-size: 0.85rem; }
+.informe-desc { margin-bottom: 1rem; color: var(--text-muted); font-size: 0.95rem; }
+.informe-footer { margin-top: 1.5rem; font-size: 0.9rem; }
+.pestanyes { margin: 1rem 0; border: 1px solid #e2e8f0; border-radius: var(--radius); overflow: hidden; background: #fff; }
+.pestanyes-tabs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.25rem;
+  padding: 0.5rem 0.5rem 0;
+}
+.pestanyes-tabs-primary {
+  background: #f8fafc;
+  border-bottom: 1px solid #e2e8f0;
+}
+.pestanyes-tabs-secondary {
+  background: #fff;
+  border-bottom: 1px solid #e2e8f0;
+  margin-bottom: 0;
+  padding: 0.25rem 0.5rem 0;
+}
+.pestanya-btn {
+  padding: 0.5rem 1rem;
+  font-size: 0.95rem;
+  font-weight: 500;
+  color: var(--text-muted);
+  background: transparent;
+  border: none;
+  border-bottom: 3px solid transparent;
+  margin-bottom: -1px;
+  cursor: pointer;
+  border-radius: var(--radius) var(--radius) 0 0;
+}
+.pestanya-btn:hover { color: var(--text); background: rgba(255,255,255,0.7); }
+.pestanya-btn.active {
+  color: var(--primary);
+  border-bottom-color: var(--primary);
+  background: #fff;
+  box-shadow: 0 -1px 3px rgba(0,0,0,0.04);
+}
+.seccio-btn {
+  padding: 0.4rem 0.85rem;
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: var(--text-muted);
+  background: transparent;
+  border: none;
+  border-bottom: 2px solid transparent;
+  margin-bottom: -1px;
+  cursor: pointer;
+  border-radius: var(--radius) var(--radius) 0 0;
+}
+.seccio-btn:hover { color: var(--text); background: #f7fafc; }
+.seccio-btn.active {
+  color: var(--primary);
+  border-bottom-color: var(--primary);
+  background: #eff6ff;
+}
+.pestanya-contingut { display: none; padding: 0; }
+.pestanya-contingut.active { display: block; }
+.seccio-contingut { padding: 1.25rem 1.5rem; }
+.seccio-panel { display: none; }
+.seccio-panel.active { display: block; }
+.tag-tractament, .tag-general {
+  display: inline-block;
+  font-size: 0.75rem;
+  padding: 0.15rem 0.5rem;
+  border-radius: 4px;
+  margin-left: 0.35rem;
+  vertical-align: middle;
+}
+.tag-tractament { background: #e2e8f0; color: #334155; }
+.tag-general { background: #f1f5f9; color: #64748b; }

@@ -1,0 +1,22 @@
+{
+  "nom_organitzacio": "Organització Prova",
+  "data_auditoria": "2025-05-31",
+  "tractaments": [],
+  "politica_privacitat": {
+    "existeix": true,
+    "accessible": true,
+    "contingut_deure_informacio": true,
+    "actualitzada": true,
+    "idiomes": ["ca"],
+    "notes": ""
+  },
+  "configuracio_acces": {
+    "acces_restringit_per_rol": true,
+    "registre_accions": true,
+    "formacio_obligatoria": true,
+    "confidencialitat_contractual": true,
+    "notes": ""
+  },
+  "checklist_controls": {},
+  "altres_notes": ""
+}

@@ -1,0 +1,37 @@
+{
+  "nom_organitzacio": "Arxiu Històric S.L.",
+  "data_auditoria": "2025-05-31",
+  "tractaments": [
+    {
+      "id": "T001",
+      "nom": "Arxiu documental històric",
+      "finalitat": "Conservació de documentació històrica per a recerca i arxivat",
+      "base_legal": "interes_legitim",
+      "categories_dades": ["nom", "dades_contacte", "curriculum"],
+      "destinataris": ["Arxiu intern"],
+      "transferencies_internacionals": false,
+      "termini_conservacio": "indefinit",
+      "mesures_seguretat": ["acces_restringit_rol", "xifrat", "copies_seguretat"],
+      "dpo_assignat": true,
+      "tipus_dades": "arxivat",
+      "notes": "Termini indefinit: avís informatiu art. 89 RGPD."
+    }
+  ],
+  "politica_privacitat": {
+    "existeix": true,
+    "accessible": true,
+    "contingut_deure_informacio": true,
+    "actualitzada": true,
+    "idiomes": ["ca"],
+    "notes": ""
+  },
+  "configuracio_acces": {
+    "acces_restringit_per_rol": true,
+    "registre_accions": true,
+    "formacio_obligatoria": true,
+    "confidencialitat_contractual": true,
+    "notes": ""
+  },
+  "checklist_controls": {},
+  "altres_notes": "Casuística 07: termini indefinit. Esperat: finding SENSE_DADES informatiu a RGPD_ART5_TERMINI_ADEQUACIO (no és NO_COMPLEIX)."
+}

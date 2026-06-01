@@ -1,0 +1,22 @@
+{
+  "nom_organitzacio": "Startup Sense ROPA",
+  "data_auditoria": "2025-05-31",
+  "tractaments": [],
+  "politica_privacitat": {
+    "existeix": true,
+    "accessible": true,
+    "contingut_deure_informacio": true,
+    "actualitzada": true,
+    "idiomes": ["ca"],
+    "notes": ""
+  },
+  "configuracio_acces": {
+    "acces_restringit_per_rol": true,
+    "registre_accions": true,
+    "formacio_obligatoria": false,
+    "confidencialitat_contractual": true,
+    "notes": ""
+  },
+  "checklist_controls": {},
+  "altres_notes": "Casuística 02: sense tractaments declarats. Esperat: SENSE_DADES en criteris per tractament; registre d'activitats informatiu."
+}

@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+{% block title %}Inici{% endblock %}
+{% block content %}
+  <section class="card info-box">
+    <h2>Com detecta l'eina si es compleix o no?</h2>
+    <p>L'eina <strong>no valida la nomenclatura</strong> que feu servir. Comprova només:</p>
+    <ul>
+      <li><strong>Si hi ha dada o no:</strong> per a base legal, finalitat, termini de conservació, mesures de seguretat, etc., es considera que <em>compleix</em> si el camp té algun valor (el que sigui). Podeu escriure "consentiment", "art. 6.1.a", "contracte" o la vostra pròpia denominació.</li>
+      <li><strong>Per a sí/no (CSV o formulari):</strong> per a DPO, transferències, política accessible, etc., l'eina es basa en el que indiqueu (sí/no, 1/0, true/false, etc.). Accepta diverses formes (sí, si, yes, 1, true, cert; no, n, 0, false).</li>
+    </ul>
+    <p class="muted">És a dir: la informació sempre s'entra amb les nomenclatures que vosaltres poseu; l'eina només comprova que hàgiu omplert els camps i que les respostes sí/no siguin coherents. No interpreta el significat legal dels termes.</p>
+  </section>
+  <section class="card">
+    <h2>Començar una auditoria</h2>
+    <p>Importeu les dades des d'un fitxer o introduïu-les manualment. Després executeu l'auditoria per obtenir el informe amb riscos i recomanacions.</p>
+    <div class="actions">
+      <a href="{{ url_for('importar_json') }}" class="btn btn-primary">Importar JSON</a>
+      <a href="{{ url_for('importar_csv') }}" class="btn btn-primary">Importar CSV</a>
+      <a href="{{ url_for('dades') }}" class="btn btn-secondary">Introduir dades manualment</a>
+    </div>
+  </section>
+  <section class="card">
+    <h3>Format JSON</h3>
+    <p>Un únic fitxer JSON amb <code>nom_organitzacio</code>, <code>data_auditoria</code>, <code>tractaments</code>, <code>politica_privacitat</code> i <code>configuracio_acces</code>. Podeu usar <code>dades_exemple/auditoria_exemple.json</code> com a plantilla.</p>
+  </section>
+  <section class="card">
+    <h3>Format CSV</h3>
+    <p>Un fitxer CSV amb una fila per tractament. A la segona pantalla podreu <strong>assignar cada columna del CSV</strong> al camp corresponent (nom, finalitat, base legal, termini de conservació, etc.).</p>
+  </section>
+{% endblock %}

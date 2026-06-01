@@ -1,0 +1,33 @@
+{
+  "nom_organitzacio": "Empresa Prova Validacio",
+  "data_auditoria": "2026-04-27",
+  "tractaments": [
+    {
+      "id": "T-VAL-001",
+      "nom": "Gestio de candidatures",
+      "finalitat": "Seleccio de personal",
+      "base_legal": "",
+      "categories_dades": ["dades_identificatives", "curriculum"],
+      "destinataris": [],
+      "transferencies_internacionals": false,
+      "termini_conservacio": "",
+      "mesures_seguretat": [],
+      "dpo_assignat": false,
+      "notes": "Cas de prova amb camps clau buits per forcar error/avís de validacio."
+    }
+  ],
+  "politica_privacitat": {
+    "existeix": false,
+    "accessible": false,
+    "contingut_deure_informacio": false,
+    "actualitzada": false,
+    "idiomes": []
+  },
+  "configuracio_acces": {
+    "acces_restringit_per_rol": false,
+    "registre_accions": false,
+    "formacio_obligatoria": false,
+    "confidencialitat_contractual": false
+  },
+  "altres_notes": "Fitxer de prova per obtenir captura de validacio amb flux clicable."
+}

@@ -1,0 +1,51 @@
+{
+  "nom_organitzacio": "Empresa DPO Parcial",
+  "data_auditoria": "2025-05-31",
+  "tractaments": [
+    {
+      "id": "T001",
+      "nom": "Nòmines",
+      "finalitat": "Gestió de nòmines",
+      "base_legal": "obligacio_legal",
+      "categories_dades": ["dades_laborals"],
+      "destinataris": ["RRHH"],
+      "transferencies_internacionals": false,
+      "termini_conservacio": "4 anys",
+      "mesures_seguretat": ["acces_restringit_rol", "xifrat"],
+      "dpo_assignat": true,
+      "tipus_dades": "treballadors",
+      "notes": "COMPLEIX: DPO assignat."
+    },
+    {
+      "id": "T002",
+      "nom": "Selecció de personal",
+      "finalitat": "Procés de selecció i entrevistes",
+      "base_legal": "interes_legitim",
+      "categories_dades": ["curriculum", "dades_contacte"],
+      "destinataris": ["RRHH"],
+      "transferencies_internacionals": false,
+      "termini_conservacio": "1 any",
+      "mesures_seguretat": ["acces_restringit_rol"],
+      "dpo_assignat": false,
+      "tipus_dades": "curriculums",
+      "notes": "NO COMPLEIX: sense DPO assignat."
+    }
+  ],
+  "politica_privacitat": {
+    "existeix": true,
+    "accessible": true,
+    "contingut_deure_informacio": true,
+    "actualitzada": true,
+    "idiomes": ["ca"],
+    "notes": ""
+  },
+  "configuracio_acces": {
+    "acces_restringit_per_rol": true,
+    "registre_accions": true,
+    "formacio_obligatoria": true,
+    "confidencialitat_contractual": true,
+    "notes": ""
+  },
+  "checklist_controls": {},
+  "altres_notes": "Casuística 18: DPO parcial (1 de 2). Esperat: General COMPLEIX parcial + T002 NO_COMPLEIX a RGPD_ART37_DPO."
+}

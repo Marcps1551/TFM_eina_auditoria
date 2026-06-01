@@ -1,0 +1,29 @@
+{
+  "nom_organitzacio": "",
+  "data_auditoria": "2026-04-27",
+  "tractaments": {
+    "id": "T-ERR-001",
+    "nom": "Nòmines",
+    "finalitat": "Gestió de nòmines",
+    "base_legal": "obligacio_legal",
+    "categories_dades": ["dades_laborals"],
+    "destinataris": ["Gestoria"],
+    "transferencies_internacionals": "no",
+    "termini_conservacio": "",
+    "mesures_seguretat": [],
+    "dpo_assignat": "si"
+  },
+  "politica_privacitat": {
+    "existeix": "true",
+    "accessible": true,
+    "contingut_deure_informacio": true,
+    "actualitzada": true
+  },
+  "configuracio_acces": {
+    "acces_restringit_per_rol": true,
+    "registre_accions": true,
+    "formacio_obligatoria": false,
+    "confidencialitat_contractual": true
+  },
+  "altres_notes": "Fitxer creat expressament per provocar error de validació al carregar dades."
+}

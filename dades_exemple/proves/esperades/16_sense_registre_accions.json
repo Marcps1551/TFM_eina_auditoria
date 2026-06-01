@@ -1,0 +1,302 @@
+{
+  "fitxer_entrada": "16_sense_registre_accions.json",
+  "resum": {
+    "per_resultat": {
+      "compleix": 17,
+      "no_compleix": 2,
+      "sense_dades": 29
+    },
+    "per_nivell_risc": {
+      "baix": 14,
+      "mitja": 5,
+      "informat": 29
+    },
+    "total_criteris": 48
+  },
+  "num_riscos": 2,
+  "num_recomanacions": 2,
+  "findings_no_compleix": [
+    {
+      "criteri_id": "REGISTRE_ACCIONS",
+      "resultat": "no_compleix",
+      "nivell_risc": "mitja",
+      "descripcio": "No consta registre d'accions sobre dades personals. Es recomana tenir traçabilitat (bones pràctiques RGPD/LOPD-GDD).",
+      "tractament_id": null,
+      "tractament_nom": null
+    },
+    {
+      "criteri_id": "RGPD_ART5_2_RESPONSABILITAT",
+      "resultat": "no_compleix",
+      "nivell_risc": "mitja",
+      "descripcio": "No consta evidència mínima de responsabilitat proactiva (registre d'accions o mesures d'avaluació). Revisar RGPD art. 5.2.",
+      "tractament_id": null,
+      "tractament_nom": null
+    }
+  ],
+  "findings_sense_dades": [
+    {
+      "criteri_id": "RGPD_ART7_CONSENTIMENT",
+      "resultat": "sense_dades",
+      "nivell_risc": "informat",
+      "descripcio": "Aquest control no es pot avaluar amb les dades estructurades. Ompliu 'checklist_controls' amb 'RGPD_ART7_CONSENTIMENT': true/false o indiqueu les mesures/categories/terminis corresponents.",
+      "tractament_id": null,
+      "tractament_nom": null
+    },
+    {
+      "criteri_id": "RGPD_ART9_DADES_ESPECIALS",
+      "resultat": "sense_dades",
+      "nivell_risc": "informat",
+      "descripcio": "Aquest control no es pot avaluar amb les dades estructurades. Ompliu 'checklist_controls' amb 'RGPD_ART9_DADES_ESPECIALS': true/false o indiqueu les mesures/categories/terminis corresponents.",
+      "tractament_id": null,
+      "tractament_nom": null
+    },
+    {
+      "criteri_id": "RGPD_ART15_ACCES",
+      "resultat": "sense_dades",
+      "nivell_risc": "informat",
+      "descripcio": "Aquest control no es pot avaluar amb les dades estructurades. Ompliu 'checklist_controls' amb 'RGPD_ART15_ACCES': true/false o indiqueu les mesures/categories/terminis corresponents.",
+      "tractament_id": null,
+      "tractament_nom": null
+    },
+    {
+      "criteri_id": "RGPD_ART16_RECTIFICACIO",
+      "resultat": "sense_dades",
+      "nivell_risc": "informat",
+      "descripcio": "Aquest control no es pot avaluar amb les dades estructurades. Ompliu 'checklist_controls' amb 'RGPD_ART16_RECTIFICACIO': true/false o indiqueu les mesures/categories/terminis corresponents.",
+      "tractament_id": null,
+      "tractament_nom": null
+    },
+    {
+      "criteri_id": "RGPD_ART17_SUPRESSIO",
+      "resultat": "sense_dades",
+      "nivell_risc": "informat",
+      "descripcio": "Aquest control no es pot avaluar amb les dades estructurades. Ompliu 'checklist_controls' amb 'RGPD_ART17_SUPRESSIO': true/false o indiqueu les mesures/categories/terminis corresponents.",
+      "tractament_id": null,
+      "tractament_nom": null
+    },
+    {
+      "criteri_id": "RGPD_ART18_LIMITACIO",
+      "resultat": "sense_dades",
+      "nivell_risc": "informat",
+      "descripcio": "Aquest control no es pot avaluar amb les dades estructurades. Ompliu 'checklist_controls' amb 'RGPD_ART18_LIMITACIO': true/false o indiqueu les mesures/categories/terminis corresponents.",
+      "tractament_id": null,
+      "tractament_nom": null
+    },
+    {
+      "criteri_id": "RGPD_ART20_PORTABILITAT",
+      "resultat": "sense_dades",
+      "nivell_risc": "informat",
+      "descripcio": "Aquest control no es pot avaluar amb les dades estructurades. Ompliu 'checklist_controls' amb 'RGPD_ART20_PORTABILITAT': true/false o indiqueu les mesures/categories/terminis corresponents.",
+      "tractament_id": null,
+      "tractament_nom": null
+    },
+    {
+      "criteri_id": "RGPD_ART21_OBSECCIO",
+      "resultat": "sense_dades",
+      "nivell_risc": "informat",
+      "descripcio": "Aquest control no es pot avaluar amb les dades estructurades. Ompliu 'checklist_controls' amb 'RGPD_ART21_OBSECCIO': true/false o indiqueu les mesures/categories/terminis corresponents.",
+      "tractament_id": null,
+      "tractament_nom": null
+    },
+    {
+      "criteri_id": "RGPD_ART33_NOTIFICACIO_VIOLACIO",
+      "resultat": "sense_dades",
+      "nivell_risc": "informat",
+      "descripcio": "Aquest control no es pot avaluar amb les dades estructurades. Ompliu 'checklist_controls' amb 'RGPD_ART33_NOTIFICACIO_VIOLACIO': true/false o indiqueu les mesures/categories/terminis corresponents.",
+      "tractament_id": null,
+      "tractament_nom": null
+    },
+    {
+      "criteri_id": "RGPD_ART34_COMUNICACIO_VIOLACIO",
+      "resultat": "sense_dades",
+      "nivell_risc": "informat",
+      "descripcio": "Aquest control no es pot avaluar amb les dades estructurades. Ompliu 'checklist_controls' amb 'RGPD_ART34_COMUNICACIO_VIOLACIO': true/false o indiqueu les mesures/categories/terminis corresponents.",
+      "tractament_id": null,
+      "tractament_nom": null
+    },
+    {
+      "criteri_id": "RGPD_ART35_PIA",
+      "resultat": "sense_dades",
+      "nivell_risc": "informat",
+      "descripcio": "Aquest control no es pot avaluar amb les dades estructurades. Ompliu 'checklist_controls' amb 'RGPD_ART35_PIA': true/false o indiqueu les mesures/categories/terminis corresponents.",
+      "tractament_id": null,
+      "tractament_nom": null
+    },
+    {
+      "criteri_id": "RGPD_ART24_MESURES_COMPLIMENT",
+      "resultat": "sense_dades",
+      "nivell_risc": "informat",
+      "descripcio": "Aquest control no es pot avaluar amb les dades estructurades. Ompliu 'checklist_controls' amb 'RGPD_ART24_MESURES_COMPLIMENT': true/false o indiqueu les mesures/categories/terminis corresponents.",
+      "tractament_id": null,
+      "tractament_nom": null
+    },
+    {
+      "criteri_id": "ISO27701_A_6.1",
+      "resultat": "sense_dades",
+      "nivell_risc": "informat",
+      "descripcio": "Aquest control no es pot avaluar amb les dades estructurades. Ompliu 'checklist_controls' amb 'ISO27701_A_6.1': true/false o indiqueu les mesures/categories/terminis corresponents.",
+      "tractament_id": null,
+      "tractament_nom": null
+    },
+    {
+      "criteri_id": "ISO27701_A_6.2",
+      "resultat": "sense_dades",
+      "nivell_risc": "informat",
+      "descripcio": "Aquest control no es pot avaluar amb les dades estructurades. Ompliu 'checklist_controls' amb 'ISO27701_A_6.2': true/false o indiqueu les mesures/categories/terminis corresponents.",
+      "tractament_id": null,
+      "tractament_nom": null
+    },
+    {
+      "criteri_id": "ISO27701_A_6.3",
+      "resultat": "sense_dades",
+      "nivell_risc": "informat",
+      "descripcio": "Aquest control no es pot avaluar amb les dades estructurades. Ompliu 'checklist_controls' amb 'ISO27701_A_6.3': true/false o indiqueu les mesures/categories/terminis corresponents.",
+      "tractament_id": null,
+      "tractament_nom": null
+    },
+    {
+      "criteri_id": "ISO27701_A_6.5",
+      "resultat": "sense_dades",
+      "nivell_risc": "informat",
+      "descripcio": "Aquest control no es pot avaluar amb les dades estructurades. Ompliu 'checklist_controls' amb 'ISO27701_A_6.5': true/false o indiqueu les mesures/categories/terminis corresponents.",
+      "tractament_id": null,
+      "tractament_nom": null
+    },
+    {
+      "criteri_id": "ISO27701_A_6.6",
+      "resultat": "sense_dades",
+      "nivell_risc": "informat",
+      "descripcio": "Aquest control no es pot avaluar amb les dades estructurades. Ompliu 'checklist_controls' amb 'ISO27701_A_6.6': true/false o indiqueu les mesures/categories/terminis corresponents.",
+      "tractament_id": null,
+      "tractament_nom": null
+    },
+    {
+      "criteri_id": "ISO27701_A_6.7",
+      "resultat": "sense_dades",
+      "nivell_risc": "informat",
+      "descripcio": "Aquest control no es pot avaluar amb les dades estructurades. Ompliu 'checklist_controls' amb 'ISO27701_A_6.7': true/false o indiqueu les mesures/categories/terminis corresponents.",
+      "tractament_id": null,
+      "tractament_nom": null
+    },
+    {
+      "criteri_id": "ISO27701_A_6.8",
+      "resultat": "sense_dades",
+      "nivell_risc": "informat",
+      "descripcio": "Aquest control no es pot avaluar amb les dades estructurades. Ompliu 'checklist_controls' amb 'ISO27701_A_6.8': true/false o indiqueu les mesures/categories/terminis corresponents.",
+      "tractament_id": null,
+      "tractament_nom": null
+    },
+    {
+      "criteri_id": "ISO27701_A_7",
+      "resultat": "sense_dades",
+      "nivell_risc": "informat",
+      "descripcio": "Aquest control no es pot avaluar amb les dades estructurades. Ompliu 'checklist_controls' amb 'ISO27701_A_7': true/false o indiqueu les mesures/categories/terminis corresponents.",
+      "tractament_id": null,
+      "tractament_nom": null
+    },
+    {
+      "criteri_id": "ISO27701_A_8",
+      "resultat": "sense_dades",
+      "nivell_risc": "informat",
+      "descripcio": "Aquest control no es pot avaluar amb les dades estructurades. Ompliu 'checklist_controls' amb 'ISO27701_A_8': true/false o indiqueu les mesures/categories/terminis corresponents.",
+      "tractament_id": null,
+      "tractament_nom": null
+    },
+    {
+      "criteri_id": "ISO27701_A_9",
+      "resultat": "sense_dades",
+      "nivell_risc": "informat",
+      "descripcio": "Aquest control no es pot avaluar amb les dades estructurades. Ompliu 'checklist_controls' amb 'ISO27701_A_9': true/false o indiqueu les mesures/categories/terminis corresponents.",
+      "tractament_id": null,
+      "tractament_nom": null
+    },
+    {
+      "criteri_id": "ISO27701_A_10",
+      "resultat": "sense_dades",
+      "nivell_risc": "informat",
+      "descripcio": "Aquest control no es pot avaluar amb les dades estructurades. Ompliu 'checklist_controls' amb 'ISO27701_A_10': true/false o indiqueu les mesures/categories/terminis corresponents.",
+      "tractament_id": null,
+      "tractament_nom": null
+    },
+    {
+      "criteri_id": "ISO27701_B_6.1",
+      "resultat": "sense_dades",
+      "nivell_risc": "informat",
+      "descripcio": "Aquest control no es pot avaluar amb les dades estructurades. Ompliu 'checklist_controls' amb 'ISO27701_B_6.1': true/false o indiqueu les mesures/categories/terminis corresponents.",
+      "tractament_id": null,
+      "tractament_nom": null
+    },
+    {
+      "criteri_id": "ISO27701_B_6.2",
+      "resultat": "sense_dades",
+      "nivell_risc": "informat",
+      "descripcio": "Aquest control no es pot avaluar amb les dades estructurades. Ompliu 'checklist_controls' amb 'ISO27701_B_6.2': true/false o indiqueu les mesures/categories/terminis corresponents.",
+      "tractament_id": null,
+      "tractament_nom": null
+    },
+    {
+      "criteri_id": "ISO27701_B_6.3",
+      "resultat": "sense_dades",
+      "nivell_risc": "informat",
+      "descripcio": "Aquest control no es pot avaluar amb les dades estructurades. Ompliu 'checklist_controls' amb 'ISO27701_B_6.3': true/false o indiqueu les mesures/categories/terminis corresponents.",
+      "tractament_id": null,
+      "tractament_nom": null
+    },
+    {
+      "criteri_id": "ISO27701_B_6.4",
+      "resultat": "sense_dades",
+      "nivell_risc": "informat",
+      "descripcio": "Aquest control no es pot avaluar amb les dades estructurades. Ompliu 'checklist_controls' amb 'ISO27701_B_6.4': true/false o indiqueu les mesures/categories/terminis corresponents.",
+      "tractament_id": null,
+      "tractament_nom": null
+    },
+    {
+      "criteri_id": "ISO27701_B_7",
+      "resultat": "sense_dades",
+      "nivell_risc": "informat",
+      "descripcio": "Aquest control no es pot avaluar amb les dades estructurades. Ompliu 'checklist_controls' amb 'ISO27701_B_7': true/false o indiqueu les mesures/categories/terminis corresponents.",
+      "tractament_id": null,
+      "tractament_nom": null
+    },
+    {
+      "criteri_id": "ISO27701_B_8",
+      "resultat": "sense_dades",
+      "nivell_risc": "informat",
+      "descripcio": "Aquest control no es pot avaluar amb les dades estructurades. Ompliu 'checklist_controls' amb 'ISO27701_B_8': true/false o indiqueu les mesures/categories/terminis corresponents.",
+      "tractament_id": null,
+      "tractament_nom": null
+    }
+  ],
+  "riscos": [
+    {
+      "id": "R_REGISTRE_ACCIONS_0",
+      "titol": "No compliment: Registre d'accions",
+      "nivell": "mitja",
+      "tractament_id": null
+    },
+    {
+      "id": "R_RGPD_ART5_2_RESPONSABILITAT_1",
+      "titol": "No compliment: Responsabilitat proactiva",
+      "nivell": "mitja",
+      "tractament_id": null
+    }
+  ],
+  "per_tipus_dades": {
+    "clients": {
+      "resum": {
+        "per_resultat": {
+          "compleix": 17,
+          "no_compleix": 2,
+          "sense_dades": 29
+        },
+        "per_nivell_risc": {
+          "baix": 14,
+          "mitja": 5,
+          "informat": 29
+        },
+        "total_criteris": 48
+      },
+      "num_no_compleix": 2
+    }
+  }
+}

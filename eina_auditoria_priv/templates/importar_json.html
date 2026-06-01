@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+{% block title %}Importar JSON{% endblock %}
+{% block content %}
+  <section class="card">
+    <h2>Importar dades des de JSON</h2>
+    <p>Seleccioneu un fitxer JSON que compleixi l'estructura de l'eina (organització, tractaments, política de privacitat, configuració d'accés).</p>
+    <form method="post" enctype="multipart/form-data" class="form-upload">
+      <label for="fitxer_json">Fitxer JSON</label>
+      <input type="file" name="fitxer_json" id="fitxer_json" accept=".json,application/json" required>
+      <button type="submit" class="btn btn-primary">Importar</button>
+    </form>
+    <p><a href="{{ url_for('index') }}">Tornar a l'inici</a></p>
+  </section>
+{% endblock %}

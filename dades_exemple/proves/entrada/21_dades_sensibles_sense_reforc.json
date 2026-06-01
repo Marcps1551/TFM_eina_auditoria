@@ -1,0 +1,38 @@
+{
+  "nom_organitzacio": "Clínica Salut Laboral",
+  "data_auditoria": "2025-05-31",
+  "tractaments": [
+    {
+      "id": "T001",
+      "nom": "Reconeixements mèdics",
+      "finalitat": "Gestió de reconeixements mèdics obligatoris del personal",
+      "base_legal": "obligacio_legal",
+      "categories_dades": ["dades_salut", "nom", "nif_nie"],
+      "destinataris": ["Servei mèdic intern", "Mutua"],
+      "transferencies_internacionals": false,
+      "termini_conservacio": "5 anys",
+      "mesures_seguretat": ["acces_restringit_rol", "xifrat", "copies_seguretat"],
+      "dpo_assignat": true,
+      "tipus_dades": "salut_laboral",
+      "conte_dades_sensibles": true,
+      "notes": "INCUMPLIMENT: dades sensibles sense mesures reforçades (art. 9)."
+    }
+  ],
+  "politica_privacitat": {
+    "existeix": true,
+    "accessible": true,
+    "contingut_deure_informacio": true,
+    "actualitzada": true,
+    "idiomes": ["ca"],
+    "notes": ""
+  },
+  "configuracio_acces": {
+    "acces_restringit_per_rol": true,
+    "registre_accions": true,
+    "formacio_obligatoria": true,
+    "confidencialitat_contractual": true,
+    "notes": ""
+  },
+  "checklist_controls": {},
+  "altres_notes": "Casuística 21: dades sensibles sense dades_sensibles_reforç. Esperat: NO_COMPLEIX en RGPD_ART9_DADES_ESPECIALS i ISO27701_A_6.8."
+}

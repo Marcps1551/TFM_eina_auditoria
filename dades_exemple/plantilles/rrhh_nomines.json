@@ -1,0 +1,57 @@
+{
+  "id": "rrhh_nomines",
+  "nom": "RRHH i nòmines",
+  "descripcio": "Plantilla per a gestió de dades de personal, contractes i nòmines.",
+  "dades": {
+    "nom_organitzacio": "",
+    "data_auditoria": "",
+    "tractaments": [
+      {
+        "id": "T001",
+        "nom": "Contractació i fitxa del treballador",
+        "finalitat": "Gestió de contractes, dades laborals i fitxa del personal",
+        "base_legal": "obligacio_legal",
+        "categories_dades": ["dades_laborals", "dades_contacte", "nif_nie", "dades_economiques"],
+        "destinataris": ["RRHH", "Gestoria"],
+        "transferencies_internacionals": false,
+        "termini_conservacio": "fins_baixa",
+        "mesures_seguretat": ["acces_restringit_rol", "xifrat", "copies_seguretat"],
+        "dpo_assignat": false,
+        "tipus_dades": "treballadors",
+        "notes": ""
+      },
+      {
+        "id": "T002",
+        "nom": "Nòmines i cotitzacions",
+        "finalitat": "Elaboració de nòmines i comunicació amb Seguretat Social i Tresoreria",
+        "base_legal": "obligacio_legal",
+        "categories_dades": ["dades_economiques", "nif_nie", "dades_laborals"],
+        "destinataris": ["RRHH", "Gestoria", "Seguretat Social"],
+        "transferencies_internacionals": false,
+        "termini_conservacio": "obligacio_legal",
+        "mesures_seguretat": ["acces_restringit_rol", "acords_confidencialitat"],
+        "dpo_assignat": false,
+        "tipus_dades": "treballadors",
+        "notes": ""
+      },
+      {
+        "id": "T003",
+        "nom": "Candidatures i currículums",
+        "finalitat": "Gestió de candidatures i procés de selecció",
+        "base_legal": "execucio_contracte",
+        "categories_dades": ["curriculum", "dades_contacte", "formacio_experiencia"],
+        "destinataris": ["RRHH", "Cap d'àrea"],
+        "transferencies_internacionals": false,
+        "termini_conservacio": "1 any",
+        "mesures_seguretat": ["acces_restringit_rol", "supressio_programada"],
+        "dpo_assignat": false,
+        "tipus_dades": "curriculums",
+        "notes": ""
+      }
+    ],
+    "politica_privacitat": null,
+    "configuracio_acces": null,
+    "checklist_controls": {},
+    "altres_notes": "Completeu política, accés i checklist segons la vostra organització."
+  }
+}

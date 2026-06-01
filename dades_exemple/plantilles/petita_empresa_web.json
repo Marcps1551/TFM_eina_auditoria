@@ -1,0 +1,56 @@
+{
+  "id": "petita_empresa_web",
+  "nom": "Petita empresa – Web i newsletter",
+  "descripcio": "Plantilla per a empresa amb web corporativa, formulari de contacte i newsletter.",
+  "dades": {
+    "nom_organitzacio": "",
+    "data_auditoria": "",
+    "tractaments": [
+      {
+        "id": "T001",
+        "nom": "Formulari de contacte web",
+        "finalitat": "Gestió de sol·licituds i consultes rebudes pel formulari de contacte",
+        "base_legal": "consentiment",
+        "categories_dades": ["nom", "email", "missatge"],
+        "destinataris": ["Comercial", "Administració"],
+        "transferencies_internacionals": false,
+        "termini_conservacio": "2 anys",
+        "mesures_seguretat": ["acces_restringit_rol", "copies_seguretat"],
+        "dpo_assignat": false,
+        "tipus_dades": "contacte_web",
+        "notes": ""
+      },
+      {
+        "id": "T002",
+        "nom": "Newsletter i comunicacions comercials",
+        "finalitat": "Enviament de newsletter i comunicacions de màrqueting",
+        "base_legal": "consentiment",
+        "categories_dades": ["email", "nom", "preferencies_comunicacio"],
+        "destinataris": ["Màrqueting"],
+        "transferencies_internacionals": false,
+        "termini_conservacio": "fins_renovacio",
+        "mesures_seguretat": ["registre_consentiments", "link_baixa"],
+        "dpo_assignat": false,
+        "tipus_dades": "màrqueting",
+        "notes": ""
+      }
+    ],
+    "politica_privacitat": {
+      "existeix": false,
+      "accessible": false,
+      "contingut_deure_informacio": false,
+      "actualitzada": false,
+      "idiomes": [],
+      "notes": ""
+    },
+    "configuracio_acces": {
+      "acces_restringit_per_rol": false,
+      "registre_accions": false,
+      "formacio_obligatoria": false,
+      "confidencialitat_contractual": false,
+      "notes": ""
+    },
+    "checklist_controls": {},
+    "altres_notes": "Completeu els camps i executeu l'auditoria."
+  }
+}

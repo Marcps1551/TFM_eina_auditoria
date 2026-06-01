@@ -1,0 +1,85 @@
+{% extends "base.html" %}
+{% block title %}Dades de l'auditoria{% endblock %}
+{% block content %}
+  <section class="card">
+    <h2>Dades de l'organització i de l'auditoria</h2>
+    <form method="post" class="form-dades">
+      <div class="form-group">
+        <label for="nom_organitzacio">Nom de l'organització</label>
+        <input type="text" name="nom_organitzacio" id="nom_organitzacio" value="{{ dades.nom_organitzacio or '' }}" placeholder="Ex: Empresa S.L.">
+      </div>
+      <div class="form-group">
+        <label for="data_auditoria">Data de l'auditoria</label>
+        <input type="date" name="data_auditoria" id="data_auditoria" value="{{ dades.data_auditoria or '' }}">
+      </div>
+      <h3>Política de privacitat</h3>
+      {% set pp = dades.politica_privacitat or {} %}
+      <div class="checkboxes">
+        <label><input type="checkbox" name="politica_existeix" value="1" {% if pp.existeix %}checked{% endif %}> Existeix política de privacitat</label>
+        <label><input type="checkbox" name="politica_accessible" value="1" {% if pp.accessible %}checked{% endif %}> És accessible</label>
+        <label><input type="checkbox" name="politica_contingut" value="1" {% if pp.contingut_deure_informacio %}checked{% endif %}> Inclou el deure d'informació (arts. 13/14 RGPD)</label>
+        <label><input type="checkbox" name="politica_actualitzada" value="1" {% if pp.actualitzada %}checked{% endif %}> Està actualitzada</label>
+      </div>
+      <div class="form-group">
+        <label for="politica_idiomes">Idiomes (separats per coma)</label>
+        <input type="text" name="politica_idiomes" id="politica_idiomes" value="{{ (pp.idiomes or [])|join(', ') }}" placeholder="ca, es">
+      </div>
+
+      <h3>Configuració d'accés</h3>
+      {% set ca = dades.configuracio_acces or {} %}
+      <div class="checkboxes">
+        <label><input type="checkbox" name="acces_rol" value="1" {% if ca.acces_restringit_per_rol %}checked{% endif %}> Accés restringit per rol</label>
+        <label><input type="checkbox" name="registre_accions" value="1" {% if ca.registre_accions %}checked{% endif %}> Registre d'accions</label>
+        <label><input type="checkbox" name="formacio" value="1" {% if ca.formacio_obligatoria %}checked{% endif %}> Formació obligatòria</label>
+        <label><input type="checkbox" name="confidencialitat" value="1" {% if ca.confidencialitat_contractual %}checked{% endif %}> Confidencialitat contractual</label>
+      </div>
+
+      <div class="form-group">
+        <label for="altres_notes">Altres notes (comentaris generals sobre l'auditoria o el context)</label>
+        <textarea name="altres_notes" id="altres_notes" rows="2">{{ dades.altres_notes or '' }}</textarea>
+      </div>
+
+      <div class="form-actions">
+        <button type="submit" class="btn btn-primary">Desar dades</button>
+      </div>
+    </form>
+  </section>
+
+  <section class="card">
+    <h2>Tractaments ({{ (dades.tractaments or [])|length }})</h2>
+    <p>Aquests tractaments provenen del JSON o del CSV importat. Per modificar-los, torneu a importar un fitxer o editeu el JSON manualment.</p>
+    {% if dades.tractaments %}
+      <div class="table-wrap">
+        <table class="data-table">
+          <thead>
+            <tr>
+              <th>ID</th>
+              <th>Nom</th>
+              <th>Finalitat</th>
+              <th>Base legal</th>
+              <th>Termini</th>
+              <th>DPO</th>
+            </tr>
+          </thead>
+          <tbody>
+            {% for t in dades.tractaments %}
+              <tr>
+                <td>{{ t.id or '—' }}</td>
+                <td>{{ t.nom or '—' }}</td>
+                <td>{{ (t.finalitat or '—')[:40] }}{% if (t.finalitat or '')|length > 40 %}…{% endif %}</td>
+                <td>{{ t.base_legal or '—' }}</td>
+                <td>{{ t.termini_conservacio or '—' }}</td>
+                <td>{% if t.dpo_assignat %}Sí{% else %}No{% endif %}</td>
+              </tr>
+            {% endfor %}
+          </tbody>
+        </table>
+      </div>
+    {% else %}
+      <p class="muted">Encara no hi ha tractaments. <a href="{{ url_for('importar_json') }}">Importeu JSON</a> o <a href="{{ url_for('importar_csv') }}">CSV</a>.</p>
+    {% endif %}
+    <form method="post" action="{{ url_for('executar_auditoria') }}" style="margin-top: 1rem;">
+      <button type="submit" class="btn btn-primary">Executar auditoria</button>
+    </form>
+  </section>
+{% endblock %}

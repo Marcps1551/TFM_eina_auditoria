@@ -1,0 +1,38 @@
+{
+  "nom_organitzacio": "Hospital Conforme",
+  "data_auditoria": "2025-05-31",
+  "tractaments": [
+    {
+      "id": "T001",
+      "nom": "Historial clínic empleats",
+      "finalitat": "Gestió de la salut laboral del personal",
+      "base_legal": "obligacio_legal",
+      "categories_dades": ["dades_salut", "nom"],
+      "destinataris": ["Servei mèdic"],
+      "transferencies_internacionals": false,
+      "termini_conservacio": "10 anys",
+      "mesures_seguretat": ["acces_restringit_rol", "xifrat", "dades_sensibles_reforç", "avaluacio_riscos", "registre_acces"],
+      "dpo_assignat": true,
+      "tipus_dades": "salut_laboral",
+      "conte_dades_sensibles": true,
+      "notes": "Dades sensibles amb mesures reforçades i PIA."
+    }
+  ],
+  "politica_privacitat": {
+    "existeix": true,
+    "accessible": true,
+    "contingut_deure_informacio": true,
+    "actualitzada": true,
+    "idiomes": ["ca"],
+    "notes": ""
+  },
+  "configuracio_acces": {
+    "acces_restringit_per_rol": true,
+    "registre_accions": true,
+    "formacio_obligatoria": true,
+    "confidencialitat_contractual": true,
+    "notes": ""
+  },
+  "checklist_controls": {},
+  "altres_notes": "Casuística 22: dades sensibles amb reforç i avaluacio_riscos. Esperat: COMPLEIX en RGPD_ART9, ISO A.6.8 i RGPD_ART35_PIA."
+}

@@ -1,0 +1,37 @@
+{
+  "nom_organitzacio": "Empresa Accés Via Mesura",
+  "data_auditoria": "2025-05-31",
+  "tractaments": [
+    {
+      "id": "T001",
+      "nom": "ERP intern",
+      "finalitat": "Gestió de processos interns",
+      "base_legal": "interes_legitim",
+      "categories_dades": ["nom", "email"],
+      "destinataris": ["IT"],
+      "transferencies_internacionals": false,
+      "termini_conservacio": "3 anys",
+      "mesures_seguretat": ["acces_restringit_rol", "xifrat", "copies_seguretat"],
+      "dpo_assignat": true,
+      "tipus_dades": "intern",
+      "notes": "Accés restringit per rol via mesura del tractament, no via configuració global."
+    }
+  ],
+  "politica_privacitat": {
+    "existeix": true,
+    "accessible": true,
+    "contingut_deure_informacio": true,
+    "actualitzada": true,
+    "idiomes": ["ca"],
+    "notes": ""
+  },
+  "configuracio_acces": {
+    "acces_restringit_per_rol": false,
+    "registre_accions": true,
+    "formacio_obligatoria": true,
+    "confidencialitat_contractual": true,
+    "notes": "Config global indica accés NO restringit, però el tractament té la mesura."
+  },
+  "checklist_controls": {},
+  "altres_notes": "Casuística 28: accés restringit detectat via mesura acces_restringit_rol del tractament. Esperat: COMPLEIX en RGPD_ACCES_RESTRINGIT."
+}

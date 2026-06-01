@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+{% block title %}Importar CSV (pas 1){% endblock %}
+{% block content %}
+  <section class="card">
+    <h2>Importar tractaments des de CSV</h2>
+    <p><strong>Pas 1.</strong> Pugeu un fitxer CSV on cada fila és un tractament. La primera fila ha de ser la capçalera amb els noms de les columnes. A la següent pantalla assignareu quina columna correspon a cada camp (nom, finalitat, base legal, etc.).</p>
+    <form method="post" enctype="multipart/form-data" class="form-upload">
+      <label for="fitxer_csv">Fitxer CSV</label>
+      <input type="file" name="fitxer_csv" id="fitxer_csv" accept=".csv,text/csv,text/plain" required>
+      <button type="submit" class="btn btn-primary">Pujar i assignar columnes</button>
+    </form>
+    <p><a href="{{ url_for('index') }}">Tornar a l'inici</a></p>
+  </section>
+{% endblock %}

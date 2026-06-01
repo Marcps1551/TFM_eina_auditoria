@@ -1,0 +1,98 @@
+{
+  "id": "exemple_complet",
+  "nom": "Exemple complet (5 tractaments)",
+  "descripcio": "Plantilla amb diversos tipus: treballadors, màrqueting, curriculums, videovigilància, clients.",
+  "dades": {
+    "nom_organitzacio": "",
+    "data_auditoria": "",
+    "tractaments": [
+      {
+        "id": "T001",
+        "nom": "Contractació i nòmines",
+        "finalitat": "Gestió de dades de treballadors i nòmines",
+        "base_legal": "obligacio_legal",
+        "categories_dades": ["dades_laborals", "dades_economiques", "nif_nie"],
+        "destinataris": ["RRHH", "Gestoria"],
+        "transferencies_internacionals": false,
+        "termini_conservacio": "4 anys",
+        "mesures_seguretat": ["acces_restringit_rol", "xifrat", "copies_seguretat"],
+        "dpo_assignat": true,
+        "tipus_dades": "treballadors",
+        "notes": ""
+      },
+      {
+        "id": "T002",
+        "nom": "Newsletter",
+        "finalitat": "Comunicacions comercials i newsletter",
+        "base_legal": "consentiment",
+        "categories_dades": ["email", "nom"],
+        "destinataris": ["Màrqueting"],
+        "transferencies_internacionals": false,
+        "termini_conservacio": "fins_renovacio",
+        "mesures_seguretat": ["registre_consentiments", "link_baixa"],
+        "dpo_assignat": true,
+        "tipus_dades": "màrqueting",
+        "notes": ""
+      },
+      {
+        "id": "T003",
+        "nom": "Candidatures",
+        "finalitat": "Gestió de currículums i selecció",
+        "base_legal": "execucio_contracte",
+        "categories_dades": ["curriculum", "dades_contacte", "formacio_experiencia"],
+        "destinataris": ["RRHH"],
+        "transferencies_internacionals": false,
+        "termini_conservacio": "1 any",
+        "mesures_seguretat": ["acces_restringit_rol", "supressio_programada"],
+        "dpo_assignat": true,
+        "tipus_dades": "curriculums",
+        "notes": ""
+      },
+      {
+        "id": "T004",
+        "nom": "Videovigilància",
+        "finalitat": "Seguretat de les instal·lacions",
+        "base_legal": "interes_legitim",
+        "categories_dades": ["imatge", "registre_acces_visitants"],
+        "destinataris": ["Seguretat"],
+        "transferencies_internacionals": false,
+        "termini_conservacio": "30 dies",
+        "mesures_seguretat": ["acces_restringit_rol", "cartell_informatiu"],
+        "dpo_assignat": true,
+        "tipus_dades": "videovigilància",
+        "notes": ""
+      },
+      {
+        "id": "T005",
+        "nom": "Gestió de clients (CRM)",
+        "finalitat": "Relacions amb clients, facturació",
+        "base_legal": "execucio_contracte",
+        "categories_dades": ["dades_contacte", "dades_facturacio", "historial_comercial"],
+        "destinataris": ["Comercial", "Administració"],
+        "transferencies_internacionals": false,
+        "termini_conservacio": "6 anys",
+        "mesures_seguretat": ["acces_restringit_rol", "xifrat", "copies_seguretat"],
+        "dpo_assignat": true,
+        "tipus_dades": "clients",
+        "notes": ""
+      }
+    ],
+    "politica_privacitat": {
+      "existeix": true,
+      "accessible": true,
+      "contingut_deure_informacio": true,
+      "actualitzada": true,
+      "idiomes": ["ca", "es"],
+      "notes": ""
+    },
+    "configuracio_acces": {
+      "acces_restringit_per_rol": true,
+      "registre_accions": true,
+      "formacio_obligatoria": false,
+      "confidencialitat_contractual": true,
+      "notes": ""
+    },
+    "checklist_controls": {},
+    "altres_notes": ""
+  }
+}

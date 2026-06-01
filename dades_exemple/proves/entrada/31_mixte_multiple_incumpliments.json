@@ -1,0 +1,98 @@
+{
+  "nom_organitzacio": "Grup Varietat S.L.",
+  "data_auditoria": "2025-05-31",
+  "tractaments": [
+    {
+      "id": "T001",
+      "nom": "Contractació i nòmines",
+      "finalitat": "Gestió de dades laborals i nòmines",
+      "base_legal": "obligacio_legal",
+      "categories_dades": ["dades_laborals", "nif_nie", "dades_economiques"],
+      "destinataris": ["RRHH", "Gestoria"],
+      "transferencies_internacionals": false,
+      "termini_conservacio": "4 anys",
+      "mesures_seguretat": ["acces_restringit_rol", "xifrat", "copies_seguretat", "registre_acces"],
+      "dpo_assignat": true,
+      "tipus_dades": "treballadors",
+      "notes": "COMPLEIX."
+    },
+    {
+      "id": "T002",
+      "nom": "Newsletter EUA",
+      "finalitat": "Màrqueting via proveïdor als EUA",
+      "base_legal": "consentiment",
+      "categories_dades": ["email", "nom"],
+      "destinataris": ["Mailchimp (EUA)"],
+      "transferencies_internacionals": true,
+      "termini_conservacio": "fins_renovacio",
+      "mesures_seguretat": ["acces_restringit_rol", "link_baixa"],
+      "dpo_assignat": true,
+      "tipus_dades": "màrqueting",
+      "notes": "NO COMPLEIX: transferències sense contractes."
+    },
+    {
+      "id": "T003",
+      "nom": "Candidatures",
+      "finalitat": "Selecció de personal",
+      "base_legal": "",
+      "categories_dades": ["curriculum", "dades_contacte"],
+      "destinataris": ["RRHH"],
+      "transferencies_internacionals": false,
+      "termini_conservacio": "1 any",
+      "mesures_seguretat": ["acces_restringit_rol"],
+      "dpo_assignat": true,
+      "tipus_dades": "curriculums",
+      "notes": "NO COMPLEIX: sense base legal."
+    },
+    {
+      "id": "T004",
+      "nom": "CRM clients",
+      "finalitat": "Gestió comercial de clients",
+      "base_legal": "execucio_contracte",
+      "categories_dades": ["nom", "email", "dades_facturacio"],
+      "destinataris": ["Comercial"],
+      "transferencies_internacionals": false,
+      "termini_conservacio": "6 anys",
+      "mesures_seguretat": [],
+      "dpo_assignat": true,
+      "tipus_dades": "clients",
+      "notes": "NO COMPLEIX: sense mesures de seguretat."
+    },
+    {
+      "id": "T005",
+      "nom": "Salut laboral",
+      "finalitat": "Reconeixements mèdics del personal",
+      "base_legal": "obligacio_legal",
+      "categories_dades": ["dades_salut", "nom"],
+      "destinataris": ["Servei mèdic"],
+      "transferencies_internacionals": false,
+      "termini_conservacio": "5 anys",
+      "mesures_seguretat": ["acces_restringit_rol", "xifrat"],
+      "dpo_assignat": false,
+      "tipus_dades": "salut_laboral",
+      "conte_dades_sensibles": true,
+      "notes": "NO COMPLEIX: sensibles sense reforç, sense DPO, sense PIA."
+    }
+  ],
+  "politica_privacitat": {
+    "existeix": true,
+    "accessible": true,
+    "contingut_deure_informacio": true,
+    "actualitzada": true,
+    "idiomes": ["ca", "es"],
+    "notes": ""
+  },
+  "configuracio_acces": {
+    "acces_restringit_per_rol": true,
+    "registre_accions": true,
+    "formacio_obligatoria": true,
+    "confidencialitat_contractual": true,
+    "notes": ""
+  },
+  "checklist_controls": {
+    "General": {
+      "RGPD_ART7_CONSENTIMENT": true
+    }
+  },
+  "altres_notes": "Casuística 31: escenari mixte amb múltiples incumpliments parcials. Prova de segmentació per tipus_dades i resum global."
+}

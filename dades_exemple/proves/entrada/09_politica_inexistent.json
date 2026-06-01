@@ -1,0 +1,37 @@
+{
+  "nom_organitzacio": "Web Sense Política",
+  "data_auditoria": "2025-05-31",
+  "tractaments": [
+    {
+      "id": "T001",
+      "nom": "Formulari de contacte",
+      "finalitat": "Atenció de consultes rebudes via web",
+      "base_legal": "consentiment",
+      "categories_dades": ["nom", "email"],
+      "destinataris": ["Atenció al client"],
+      "transferencies_internacionals": false,
+      "termini_conservacio": "1 any",
+      "mesures_seguretat": ["acces_restringit_rol", "xifrat"],
+      "dpo_assignat": false,
+      "tipus_dades": "clients",
+      "notes": ""
+    }
+  ],
+  "politica_privacitat": {
+    "existeix": false,
+    "accessible": false,
+    "contingut_deure_informacio": false,
+    "actualitzada": false,
+    "idiomes": [],
+    "notes": "No hi ha política de privacitat publicada."
+  },
+  "configuracio_acces": {
+    "acces_restringit_per_rol": true,
+    "registre_accions": true,
+    "formacio_obligatoria": false,
+    "confidencialitat_contractual": true,
+    "notes": ""
+  },
+  "checklist_controls": {},
+  "altres_notes": "Casuística 09: política de privacitat inexistent. Esperat: NO_COMPLEIX en RGPD_ART13_14_POLITICA i RGPD_ART12_MODALITATS."
+}

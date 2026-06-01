@@ -1,0 +1,48 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  @apply bg-slate-50 text-slate-800 antialiased min-h-screen;
+}
+
+@layer components {
+  .btn {
+    @apply inline-flex items-center justify-center gap-2 rounded-lg px-4 py-2.5 font-medium text-sm transition shadow-sm focus:outline-none focus:ring-2 focus:ring-offset-2 disabled:opacity-60;
+  }
+  .btn-primary {
+    @apply btn bg-primary-600 text-white hover:bg-primary-700 focus:ring-primary-500;
+  }
+  .btn-secondary {
+    @apply btn bg-slate-200 text-slate-800 hover:bg-slate-300 focus:ring-slate-400;
+  }
+  .btn-success {
+    @apply btn bg-success text-white hover:bg-emerald-600 focus:ring-emerald-500;
+  }
+  .card {
+    @apply bg-white rounded-xl shadow-card border border-slate-200/80 p-6;
+  }
+  .input {
+    @apply w-full rounded-lg border border-slate-300 px-3 py-2 text-sm focus:border-primary-500 focus:ring-1 focus:ring-primary-500 outline-none;
+  }
+  /* Controls compactes de la barra de filtres de l'informe (no ocupen tot l'ample) */
+  .select-inline {
+    @apply rounded-lg border border-slate-300 bg-white px-3 py-1.5 text-sm focus:border-primary-500 focus:ring-1 focus:ring-primary-500 outline-none;
+  }
+  .input-inline {
+    @apply rounded-lg border border-slate-300 bg-white px-3 py-1.5 text-sm focus:border-primary-500 focus:ring-1 focus:ring-primary-500 outline-none min-w-0;
+  }
+  .label {
+    @apply block text-sm font-medium text-slate-700 mb-1;
+  }
+  .badge {
+    @apply inline-flex items-center rounded-full px-2.5 py-0.5 text-xs font-medium;
+  }
+  .badge-compleix { @apply bg-emerald-100 text-emerald-800; }
+  .badge-no_compleix { @apply bg-red-100 text-red-800; }
+  .badge-sense_dades { @apply bg-slate-100 text-slate-600; }
+  .badge-risc-alt { @apply bg-red-100 text-red-800; }
+  .badge-risc-mitja { @apply bg-amber-100 text-amber-800; }
+  .badge-risc-baix { @apply bg-emerald-100 text-emerald-800; }
+  .badge-risc-informat { @apply bg-slate-100 text-slate-600; }
+}

@@ -1,0 +1,4 @@
+ID;Nom;Finalitat;Base legal;Categories de dades;Destinataris;Transferències internacionals;Termini de conservació;Mesures de seguretat;DPO assignat;Notes
+T001;Gestió de nòmines;Processament de nòmines i obligacions laborals;obligacio_legal;"dades d'empleat, dades econòmiques";Gestoria externa;No;4 anys;accés restringit, xifrat;Sí;
+T002;Newsletter;Enviament de comunicacions comercials;consentiment;email, nom;;No;Fins revocació;accés restringit;Sí;
+T003;Candidatures;Gestió de candidatures a ofertes;consentiment;curriculum, contacte;RRHH;No;1 any;;No;Revisar termini
