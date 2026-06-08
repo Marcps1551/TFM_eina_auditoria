@@ -500,7 +500,7 @@ def _criteri_checklist(
     referencia: str,
     nivell_defecte: NivellRisc,
 ) -> Callable[[DadesEntradaAuditoria], AvaluacioResult]:
-    """Llegeix checklist_controls; si no hi ha resposta, avalua per dades estructurades i després per mesures."""
+    """Llegeix checklist_controls; prioritza avaluació estructurada quan permet decidir; després checklist manual."""
     def avaluar(d: DadesEntradaAuditoria) -> AvaluacioResult:
         ctrl = d.checklist_controls if d.checklist_controls else {}
         if isinstance(ctrl, dict) and ctrl:
@@ -511,14 +511,14 @@ def _criteri_checklist(
                 val = ctrl.get("General", {}).get(control_id) if isinstance(sample, dict) else None
         else:
             val = None
+        # Primer: dades estructurades (p. ex. dades sensibles sense reforç) — no les pot amagar un checklist «compleix» per defecte
+        resultat_estructurat = _avaluar_estructurat(control_id, d, nivell_defecte)
+        if resultat_estructurat is not None:
+            return resultat_estructurat
         if val is True:
             return _un(ResultatCriteri.COMPLEIX, f"Segons el checklist: {nom} es compleix.", nivell_defecte)
         if val is False:
             return _un(ResultatCriteri.NO_COMPLEIX, f"Segons el checklist: {nom} no es compleix. Cal revisar i documentar.", nivell_defecte)
-        # Sense resposta manual: primer avaluació estructurada (categories, termini, mesures, sensibles)
-        resultat_estructurat = _avaluar_estructurat(control_id, d, nivell_defecte)
-        if resultat_estructurat is not None:
-            return resultat_estructurat
         # Després: si les mesures de seguretat dels tractaments satisfan el control
         mesures_union = set()
         for t in (d.tractaments or []):

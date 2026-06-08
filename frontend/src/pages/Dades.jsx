@@ -4,6 +4,7 @@
  */
 import { useState, useEffect, useMemo } from 'react'
 import { useNavigate } from 'react-router-dom'
+import { getGeneralChecklistMap, applyDefaultChecklistTrue } from '../checklistUtils'
 import { useDades } from '../context'
 import { executarAuditoria, getChecklistMetadata, getMesuresSeguretat, getTerminiOpcions, getCategoriesDades } from '../api'
 
@@ -149,8 +150,7 @@ function ChecklistSection({ dades, update, checklistMeta, showAllChecklist, setS
   }, [checklistMeta, showAllChecklist, basesUsed])
 
   const raw = dades.checklist_controls || {}
-  const isNested = raw && typeof raw.General === 'object'
-  const generalMap = isNested ? (raw.General || {}) : (raw && !Object.prototype.hasOwnProperty.call(raw, 'General') ? raw : {})
+  const generalMap = getGeneralChecklistMap(raw)
 
   const setCheck = (controlId, value) => {
     const nextGeneral = { ...generalMap, [controlId]: value }
@@ -254,6 +254,21 @@ export default function Dades() {
   useEffect(() => {
     getCategoriesDades().then(data => Array.isArray(data) && data.length > 0 && setCategoriesDades(data)).catch(() => {})
   }, [])
+
+  // Checklist: per defecte «compleix» (true) per als controls visibles sense resposta prèvia
+  useEffect(() => {
+    if (!checklistMeta.length) return
+    setDades(prev => {
+      const nextChecklist = applyDefaultChecklistTrue(
+        prev.checklist_controls,
+        checklistMeta,
+        prev.tractaments,
+        showAllChecklist,
+      )
+      if (nextChecklist === prev.checklist_controls) return prev
+      return { ...prev, checklist_controls: nextChecklist }
+    })
+  }, [checklistMeta, showAllChecklist, setDades, dades.tractaments])
 
   const update = (path, value) => {
     setDades(prev => {
