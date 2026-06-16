@@ -12,20 +12,18 @@ L'aplicació té **dues parts** que cal tenir en marxa alhora:
 
 | Part | Què fa | On s'executa | URL |
 |------|--------|----------------|-----|
-| **Backend** | API Python (Flask) + motor d'auditoria | Carpeta `eina_auditoria_priv/` | http://127.0.0.1:5000 |
-| **Frontend** | Interfície web React (la que heu d'obrir al navegador) | Carpeta `eina_auditoria_priv/frontend/` | http://localhost:5173 |
+| **Backend** | API Python (Flask) + motor d'auditoria | Arrel del repositori (`TFM_eina_auditoria/`) | http://127.0.0.1:5000 |
+| **Frontend** | Interfície web React (la que heu d'obrir al navegador) | Carpeta `frontend/` | http://localhost:5173 |
 
 **Important:** obriu sempre el navegador a **http://localhost:5173** (frontend).  
 No utilitzeu http://127.0.0.1:5000 per a la interfície principal — aquella és la UI Flask antiga o només l'API.
 
 ### 1. Instal·lació (només la primera vegada)
 
-Obriu PowerShell o terminal **a l'arrel del projecte** — la carpeta `eina_auditoria_priv/` on hi ha aquest README i `requirements.txt`.
-
-Si el repositori està dins una altra carpeta (per exemple el TFM), primer hi entreu:
+Obriu PowerShell o terminal **a l'arrel del repositori** — la carpeta on hi ha aquest `README.md` i `requirements.txt` (per exemple `TFM_eina_auditoria/`).
 
 ```powershell
-cd eina_auditoria_priv
+cd TFM_eina_auditoria
 ```
 
 Instal·leu dependències **Python** (backend):
@@ -48,11 +46,13 @@ Cal **dues terminals obertes**. Primer el backend, després el frontend.
 
 #### Terminal 1 — Backend
 
-Des de l'arrel del projecte (`eina_auditoria_priv/`):
+Des de l'arrel del repositori (on hi ha `requirements.txt`):
 
 ```powershell
 py -m eina_auditoria_priv.webapp
 ```
+
+> **Nota:** no executeu aquesta comanda des de dins de la carpeta `eina_auditoria_priv/`, o obtindreu `ModuleNotFoundError`.
 
 Heu de veure algo com:
 
@@ -115,7 +115,7 @@ Flux d'ús:
 
 ## Mode CLI (sense interfície web)
 
-Només backend, des de `eina_auditoria_priv/`:
+Només backend, des de l'arrel del repositori:
 
 ```powershell
 py -m eina_auditoria_priv.cli dades_exemple/cas_mixt_3_tractaments.json -o informe
@@ -138,8 +138,9 @@ La interfície **recomanada** és la de React (port 5173).
 |-----------|---------|
 | `[vite] http proxy error` / `ECONNREFUSED 127.0.0.1:5000` | El **backend no està en marxa**. Obriu la Terminal 1 i executeu `py -m eina_auditoria_priv.webapp`. |
 | Pantalla sense colors / sense pestanyes | Esteu al port 5000 en lloc del 5173, o cal `npm install` + `npm run dev` al frontend. |
-| `ModuleNotFoundError: No module named 'flask'` | Executeu `pip install -r requirements.txt` des de `eina_auditoria_priv/`. |
-| Plantilles buides a Inici | El backend s'ha d'executar des de **`eina_auditoria_priv/`**, no des d'una altra carpeta. |
+| `ModuleNotFoundError: No module named 'flask'` | Executeu `pip install -r requirements.txt` des de l'arrel del repositori. |
+| `ModuleNotFoundError: No module named 'eina_auditoria_priv'` | Executeu el backend des de l'**arrel del repositori**, no des de dins `eina_auditoria_priv/`. |
+| Plantilles buides a Inici | El backend s'ha d'executar des de l'**arrel del repositori**, on hi ha `requirements.txt`. |
 | Canvis al codi no es veuen | Refresqueu el navegador amb **Ctrl+F5**. Si cal, pareu i torneu a executar `npm run dev`. |
 | `npm : no se reconoce...` | Instal·leu Node.js 18+ des de [nodejs.org](https://nodejs.org/). |
 

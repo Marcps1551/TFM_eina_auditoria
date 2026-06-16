@@ -8,4 +8,6 @@ node_modules/
 frontend/dist/
 *.egg-info/
 .DS_Store
-informe.*
+informe.json
+informe.txt
+informe.html
