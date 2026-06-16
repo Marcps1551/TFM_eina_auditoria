@@ -208,19 +208,64 @@ def _criteri_mesures_seguretat(d: DadesEntradaAuditoria) -> AvaluacioResult:
     )
 
 
-def _criteri_acces_restringit(d: DadesEntradaAuditoria) -> AvaluacioResult:
-    """Control d'accés (General). Es considera complert si configuració acces_restringit_per_rol o si algun tractament té la mesura."""
-    # Casuística: si algun tractament té accés restringit per rol a les seves mesures, es considera complert
-    for t in (d.tractaments or []):
-        ms = _mesures_set(t)
-        if "acces_restringit_rol" in ms or "acces restringit per rol" in ms or "acces_restringit per rol" in ms:
-            return _un(ResultatCriteri.COMPLEIX, "L'accés consta restringit per rol (configuració o mesures dels tractaments).", NivellRisc.BAIX)
-    if not d.configuracio_acces:
-        return _un(ResultatCriteri.SENSE_DADES, "No s'ha indicat configuració d'accés ni mesures per tractament.", NivellRisc.INFO)
+def _tractament_te_acces_restringit(t: Tractament) -> bool:
+    """True si el tractament documenta accés restringit per rol a les mesures."""
+    ms = _mesures_set(t)
+    return (
+        "acces_restringit_rol" in ms
+        or "acces restringit per rol" in ms
+        or "acces_restringit per rol" in ms
+    )
+
+
+def _criteri_config_global_o_mesura(
+    d: DadesEntradaAuditoria,
+    config_attr: str,
+    te_mesura: Callable[[Tractament], bool],
+    ok_global_msg: str,
+    ok_mesura_msg: str,
+    fail_msg_tractament: str,
+    fail_msg_general: str,
+) -> AvaluacioResult:
+    """Criteri organitzatiu: global cobreix tots els tractaments; si no, cal la mesura per tractament.
+    Si no consta ni global ni en cap tractament, un sol finding General."""
+    if not d.tractaments:
+        return _un(ResultatCriteri.SENSE_DADES, "No s'han declarat tractaments.", NivellRisc.INFO)
+
     ca = d.configuracio_acces
-    if not ca.acces_restringit_per_rol:
-        return _un(ResultatCriteri.NO_COMPLEIX, "L'accés a les dades no consta restringit per rol. Cal limitar l'accés al personal autoritzat (RGPD art. 32.4).", NivellRisc.MITJA)
-    return _un(ResultatCriteri.COMPLEIX, "L'accés consta restringit per rol.", NivellRisc.BAIX)
+    if ca and getattr(ca, config_attr, False):
+        return _per_tractament_compleix(d.tractaments, ok_global_msg, NivellRisc.BAIX)
+
+    amb_mesura = [t for t in d.tractaments if te_mesura(t)]
+    sense_mesura = [t for t in d.tractaments if not te_mesura(t)]
+
+    if not amb_mesura:
+        return _un(ResultatCriteri.NO_COMPLEIX, fail_msg_general, NivellRisc.MITJA)
+
+    if not sense_mesura:
+        return _per_tractament_compleix(d.tractaments, ok_mesura_msg, NivellRisc.BAIX)
+
+    return _partial_per_tractament(
+        d.tractaments,
+        sense_mesura,
+        fail_msg_tractament,
+        NivellRisc.MITJA,
+        ok_mesura_msg,
+        NivellRisc.BAIX,
+    )
+
+
+def _criteri_acces_restringit(d: DadesEntradaAuditoria) -> AvaluacioResult:
+    """RGPD art. 32.4: accés restringit per rol."""
+    return _criteri_config_global_o_mesura(
+        d,
+        "acces_restringit_per_rol",
+        _tractament_te_acces_restringit,
+        "L'accés consta restringit per rol (configuració global de l'organització).",
+        "Aquest tractament consta amb accés restringit per rol (mesura documentada).",
+        "Aquest tractament no consta amb accés restringit per rol. Cal limitar l'accés al personal autoritzat (RGPD art. 32.4) o indicar-ho a la configuració global.",
+        "No consta accés restringit per rol a la configuració global ni documentat en cap tractament. Cal limitar l'accés al personal autoritzat (RGPD art. 32.4).",
+    )
 
 
 def _criteri_registre_accions(d: DadesEntradaAuditoria) -> AvaluacioResult:
@@ -230,6 +275,37 @@ def _criteri_registre_accions(d: DadesEntradaAuditoria) -> AvaluacioResult:
     if not d.configuracio_acces.registre_accions:
         return _un(ResultatCriteri.NO_COMPLEIX, "No consta registre d'accions sobre dades personals. Es recomana tenir traçabilitat (bones pràctiques RGPD/LOPD-GDD).", NivellRisc.MITJA)
     return _un(ResultatCriteri.COMPLEIX, "Consta registre d'accions.", NivellRisc.BAIX)
+
+
+def _tractament_te_mesura(t: Tractament, mesura_id: str) -> bool:
+    """True si el tractament documenta una mesura de seguretat per id."""
+    return mesura_id in _mesures_set(t)
+
+
+def _criteri_formacio_obligatoria(d: DadesEntradaAuditoria) -> AvaluacioResult:
+    """RGPD art. 32: formació del personal en protecció de dades."""
+    return _criteri_config_global_o_mesura(
+        d,
+        "formacio_obligatoria",
+        lambda t: _tractament_te_mesura(t, "formacio"),
+        "Consta formació obligatòria del personal (configuració global de l'organització).",
+        "Aquest tractament consta amb formació del personal documentada (mesura de seguretat).",
+        "Aquest tractament no consta amb formació del personal. Cal formar qui tracta dades personals (RGPD art. 32) o indicar-ho a la configuració global.",
+        "No consta formació del personal a nivell organitzatiu ni documentada en cap tractament. Cal formar qui tracta dades personals (RGPD art. 32).",
+    )
+
+
+def _criteri_confidencialitat_contractual(d: DadesEntradaAuditoria) -> AvaluacioResult:
+    """RGPD art. 32.4: confidencialitat de qui accedeix a les dades."""
+    return _criteri_config_global_o_mesura(
+        d,
+        "confidencialitat_contractual",
+        lambda t: _tractament_te_mesura(t, "acords_confidencialitat"),
+        "Consta confidencialitat contractual (configuració global de l'organització).",
+        "Aquest tractament consta amb acords de confidencialitat documentats (mesura de seguretat).",
+        "Aquest tractament no consta amb confidencialitat contractual. Cal garantir la confidencialitat de qui accedeix a les dades (RGPD art. 32.4) o indicar-ho a la configuració global.",
+        "No consta confidencialitat contractual a nivell organitzatiu ni documentada en cap tractament. Cal garantir la confidencialitat de qui accedeix a les dades (RGPD art. 32.4).",
+    )
 
 
 def _criteri_dpo(d: DadesEntradaAuditoria) -> AvaluacioResult:
@@ -687,6 +763,22 @@ CRITERIS: list[Criteri] = [
         referencia_normativa="RGPD art. 5.2; bones pràctiques",
         nivell_risc_defecte=NivellRisc.MITJA,
         avaluar=_criteri_registre_accions,
+    ),
+    Criteri(
+        id="RGPD_FORMACIO_OBLIGATORIA",
+        nom="Formació obligatòria",
+        descripcio="Formació del personal que tracta dades personals.",
+        referencia_normativa="RGPD art. 32; art. 39",
+        nivell_risc_defecte=NivellRisc.MITJA,
+        avaluar=_criteri_formacio_obligatoria,
+    ),
+    Criteri(
+        id="RGPD_CONFIDENCIALITAT_CONTRACTUAL",
+        nom="Confidencialitat contractual",
+        descripcio="Garanties de confidencialitat de qui accedeix a les dades.",
+        referencia_normativa="RGPD art. 32.4; art. 28",
+        nivell_risc_defecte=NivellRisc.MITJA,
+        avaluar=_criteri_confidencialitat_contractual,
     ),
     Criteri(
         id="RGPD_ART37_DPO",

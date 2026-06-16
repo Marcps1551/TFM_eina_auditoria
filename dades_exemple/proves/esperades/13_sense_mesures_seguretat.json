@@ -2,16 +2,16 @@
   "fitxer_entrada": "13_sense_mesures_seguretat.json",
   "resum": {
     "per_resultat": {
-      "compleix": 17,
+      "compleix": 22,
       "no_compleix": 2,
       "sense_dades": 29
     },
     "per_nivell_risc": {
-      "baix": 13,
+      "baix": 18,
       "mitja": 6,
       "informat": 29
     },
-    "total_criteris": 48
+    "total_criteris": 53
   },
   "num_riscos": 2,
   "num_recomanacions": 2,
@@ -285,16 +285,16 @@
     "clients": {
       "resum": {
         "per_resultat": {
-          "compleix": 17,
+          "compleix": 22,
           "no_compleix": 2,
           "sense_dades": 29
         },
         "per_nivell_risc": {
-          "baix": 13,
+          "baix": 18,
           "mitja": 6,
           "informat": 29
         },
-        "total_criteris": 48
+        "total_criteris": 53
       },
       "num_no_compleix": 2
     }

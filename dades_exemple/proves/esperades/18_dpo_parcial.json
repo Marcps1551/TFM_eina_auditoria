@@ -2,16 +2,16 @@
   "fitxer_entrada": "18_dpo_parcial.json",
   "resum": {
     "per_resultat": {
-      "compleix": 23,
+      "compleix": 31,
       "no_compleix": 1,
       "sense_dades": 29
     },
     "per_nivell_risc": {
-      "baix": 19,
+      "baix": 27,
       "mitja": 5,
       "informat": 29
     },
-    "total_criteris": 53
+    "total_criteris": 61
   },
   "num_riscos": 1,
   "num_recomanacions": 1,
@@ -271,31 +271,31 @@
     "curriculums": {
       "resum": {
         "per_resultat": {
-          "compleix": 17,
+          "compleix": 22,
           "no_compleix": 2,
           "sense_dades": 29
         },
         "per_nivell_risc": {
-          "baix": 13,
+          "baix": 18,
           "mitja": 6,
           "informat": 29
         },
-        "total_criteris": 48
+        "total_criteris": 53
       },
       "num_no_compleix": 2
     },
     "treballadors": {
       "resum": {
         "per_resultat": {
-          "compleix": 19,
+          "compleix": 24,
           "sense_dades": 29
         },
         "per_nivell_risc": {
-          "baix": 15,
+          "baix": 20,
           "mitja": 4,
           "informat": 29
         },
-        "total_criteris": 48
+        "total_criteris": 53
       },
       "num_no_compleix": 0
     }

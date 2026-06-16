@@ -2,16 +2,16 @@
   "fitxer_entrada": "22_dades_sensibles_conformes.json",
   "resum": {
     "per_resultat": {
-      "compleix": 28,
+      "compleix": 33,
       "sense_dades": 20
     },
     "per_nivell_risc": {
-      "baix": 15,
+      "baix": 20,
       "mitja": 6,
       "informat": 20,
       "alt": 7
     },
-    "total_criteris": 48
+    "total_criteris": 53
   },
   "num_riscos": 0,
   "num_recomanacions": 0,
@@ -183,16 +183,16 @@
     "salut_laboral": {
       "resum": {
         "per_resultat": {
-          "compleix": 28,
+          "compleix": 33,
           "sense_dades": 20
         },
         "per_nivell_risc": {
-          "baix": 15,
+          "baix": 20,
           "mitja": 6,
           "informat": 20,
           "alt": 7
         },
-        "total_criteris": 48
+        "total_criteris": 53
       },
       "num_no_compleix": 0
     }

@@ -2,16 +2,16 @@
   "fitxer_entrada": "01_complet_perfecte.json",
   "resum": {
     "per_resultat": {
-      "compleix": 28,
+      "compleix": 33,
       "sense_dades": 20
     },
     "per_nivell_risc": {
-      "baix": 15,
+      "baix": 20,
       "mitja": 6,
       "alt": 7,
       "informat": 20
     },
-    "total_criteris": 48
+    "total_criteris": 53
   },
   "num_riscos": 0,
   "num_recomanacions": 0,
@@ -183,16 +183,16 @@
     "treballadors": {
       "resum": {
         "per_resultat": {
-          "compleix": 28,
+          "compleix": 33,
           "sense_dades": 20
         },
         "per_nivell_risc": {
-          "baix": 15,
+          "baix": 20,
           "mitja": 6,
           "alt": 7,
           "informat": 20
         },
-        "total_criteris": 48
+        "total_criteris": 53
       },
       "num_no_compleix": 0
     }

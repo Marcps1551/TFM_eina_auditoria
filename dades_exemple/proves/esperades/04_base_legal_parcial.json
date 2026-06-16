@@ -2,20 +2,20 @@
   "fitxer_entrada": "04_base_legal_parcial.json",
   "resum": {
     "per_resultat": {
-      "compleix": 28,
-      "no_compleix": 1,
+      "compleix": 38,
+      "no_compleix": 2,
       "sense_dades": 29
     },
     "per_nivell_risc": {
-      "baix": 24,
+      "baix": 35,
       "alt": 1,
       "mitja": 4,
       "informat": 29
     },
-    "total_criteris": 58
+    "total_criteris": 69
   },
-  "num_riscos": 1,
-  "num_recomanacions": 1,
+  "num_riscos": 2,
+  "num_recomanacions": 2,
   "findings_no_compleix": [
     {
       "criteri_id": "RGPD_ART6_BASE_LEGAL",
@@ -24,6 +24,14 @@
       "descripcio": "Sense base legal indicada. RGPD art. 6 requereix una base legal per a cada tractament.",
       "tractament_id": "T003",
       "tractament_nom": "Recepció de candidatures"
+    },
+    {
+      "criteri_id": "RGPD_ART5_PRINCIPIS",
+      "resultat": "no_compleix",
+      "nivell_risc": "mitja",
+      "descripcio": "No es disposa d’evidències mínimes sobre base_legal, finalitat i/o termini per sostenir el control de principis del tractament (RGPD art. 5).",
+      "tractament_id": null,
+      "tractament_nom": null
     }
   ],
   "findings_sense_dades": [
@@ -262,57 +270,63 @@
   ],
   "riscos": [
     {
-      "id": "R_RGPD_ART6_BASE_LEGAL",
+      "id": "R_RGPD_ART6_BASE_LEGAL_0",
       "titol": "No compliment: Base legal del tractament",
       "nivell": "alt",
       "tractament_id": "T003"
+    },
+    {
+      "id": "R_RGPD_ART5_PRINCIPIS_1",
+      "titol": "No compliment: Principis relatius al tractament",
+      "nivell": "mitja",
+      "tractament_id": null
     }
   ],
   "per_tipus_dades": {
     "curriculums": {
       "resum": {
         "per_resultat": {
-          "no_compleix": 2,
-          "compleix": 17,
+          "no_compleix": 3,
+          "compleix": 21,
           "sense_dades": 29
         },
         "per_nivell_risc": {
           "alt": 2,
-          "baix": 13,
+          "baix": 18,
           "mitja": 4,
           "informat": 29
         },
-        "total_criteris": 48
+        "total_criteris": 53
       },
-      "num_no_compleix": 2
+      "num_no_compleix": 3
     },
     "màrqueting": {
       "resum": {
         "per_resultat": {
-          "compleix": 19,
+          "compleix": 24,
           "sense_dades": 29
         },
         "per_nivell_risc": {
-          "baix": 15,
+          "baix": 20,
           "mitja": 4,
           "informat": 29
         },
-        "total_criteris": 48
+        "total_criteris": 53
       },
       "num_no_compleix": 0
     },
     "treballadors": {
       "resum": {
         "per_resultat": {
-          "compleix": 19,
+          "compleix": 24,
           "sense_dades": 29
         },
         "per_nivell_risc": {
-          "baix": 15,
+          "baix": 20,
           "mitja": 4,
           "informat": 29
         },
-        "total_criteris": 48
+        "total_criteris": 53
       },
       "num_no_compleix": 0
     }

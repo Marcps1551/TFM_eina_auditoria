@@ -2,26 +2,34 @@
   "fitxer_entrada": "09_politica_inexistent.json",
   "resum": {
     "per_resultat": {
-      "compleix": 15,
-      "no_compleix": 4,
+      "compleix": 18,
+      "no_compleix": 5,
       "sense_dades": 29
     },
     "per_nivell_risc": {
-      "baix": 12,
+      "baix": 15,
       "alt": 1,
-      "mitja": 6,
+      "mitja": 7,
       "informat": 29
     },
-    "total_criteris": 48
+    "total_criteris": 52
   },
-  "num_riscos": 4,
-  "num_recomanacions": 4,
+  "num_riscos": 5,
+  "num_recomanacions": 5,
   "findings_no_compleix": [
     {
       "criteri_id": "RGPD_ART13_14_POLITICA",
       "resultat": "no_compleix",
       "nivell_risc": "alt",
       "descripcio": "No existeix política de privacitat. RGPD arts. 13/14 exigeixen informar les persones interessades.",
+      "tractament_id": null,
+      "tractament_nom": null
+    },
+    {
+      "criteri_id": "RGPD_FORMACIO_OBLIGATORIA",
+      "resultat": "no_compleix",
+      "nivell_risc": "mitja",
+      "descripcio": "No consta formació del personal a nivell organitzatiu ni documentada en cap tractament. Cal formar qui tracta dades personals (RGPD art. 32).",
       "tractament_id": null,
       "tractament_nom": null
     },
@@ -292,8 +300,8 @@
       "tractament_id": null
     },
     {
-      "id": "R_RGPD_ART37_DPO_1",
-      "titol": "No compliment: Delegat de protecció de dades (DPO)",
+      "id": "R_RGPD_FORMACIO_OBLIGATORIA_1",
+      "titol": "No compliment: Formació obligatòria",
       "nivell": "mitja",
       "tractament_id": null
     },
@@ -301,10 +309,16 @@
       "id": "R_RGPD_ART37_DPO_2",
       "titol": "No compliment: Delegat de protecció de dades (DPO)",
       "nivell": "mitja",
+      "tractament_id": null
+    },
+    {
+      "id": "R_RGPD_ART37_DPO_3",
+      "titol": "No compliment: Delegat de protecció de dades (DPO)",
+      "nivell": "mitja",
       "tractament_id": "T001"
     },
     {
-      "id": "R_RGPD_ART12_MODALITATS_3",
+      "id": "R_RGPD_ART12_MODALITATS_4",
       "titol": "No compliment: Transparència i modalitats d'exercici dels drets",
       "nivell": "mitja",
       "tractament_id": null
@@ -314,19 +328,19 @@
     "clients": {
       "resum": {
         "per_resultat": {
-          "compleix": 15,
-          "no_compleix": 4,
+          "compleix": 18,
+          "no_compleix": 5,
           "sense_dades": 29
         },
         "per_nivell_risc": {
-          "baix": 12,
+          "baix": 15,
           "alt": 1,
-          "mitja": 6,
+          "mitja": 7,
           "informat": 29
         },
-        "total_criteris": 48
+        "total_criteris": 52
       },
-      "num_no_compleix": 4
+      "num_no_compleix": 5
     }
   }
 }

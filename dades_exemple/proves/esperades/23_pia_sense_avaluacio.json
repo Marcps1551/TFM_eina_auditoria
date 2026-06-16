@@ -2,17 +2,17 @@
   "fitxer_entrada": "23_pia_sense_avaluacio.json",
   "resum": {
     "per_resultat": {
-      "compleix": 19,
+      "compleix": 24,
       "sense_dades": 26,
       "no_compleix": 6
     },
     "per_nivell_risc": {
-      "baix": 15,
+      "baix": 20,
       "mitja": 4,
       "informat": 26,
       "alt": 6
     },
-    "total_criteris": 51
+    "total_criteris": 56
   },
   "num_riscos": 6,
   "num_recomanacions": 6,
@@ -318,17 +318,17 @@
     "videovigilància": {
       "resum": {
         "per_resultat": {
-          "compleix": 19,
+          "compleix": 24,
           "sense_dades": 26,
           "no_compleix": 6
         },
         "per_nivell_risc": {
-          "baix": 15,
+          "baix": 20,
           "mitja": 4,
           "informat": 26,
           "alt": 6
         },
-        "total_criteris": 51
+        "total_criteris": 56
       },
       "num_no_compleix": 6
     }

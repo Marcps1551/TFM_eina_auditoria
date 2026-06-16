@@ -2,17 +2,17 @@
   "fitxer_entrada": "31_mixte_multiple_incumpliments.json",
   "resum": {
     "per_resultat": {
-      "compleix": 40,
+      "compleix": 57,
       "no_compleix": 12,
       "sense_dades": 20
     },
     "per_nivell_risc": {
-      "baix": 31,
+      "baix": 48,
       "alt": 11,
       "mitja": 10,
       "informat": 20
     },
-    "total_criteris": 72
+    "total_criteris": 89
   },
   "num_riscos": 12,
   "num_recomanacions": 12,
@@ -354,17 +354,17 @@
     "clients": {
       "resum": {
         "per_resultat": {
-          "compleix": 18,
+          "compleix": 23,
           "no_compleix": 2,
           "sense_dades": 28
         },
         "per_nivell_risc": {
-          "baix": 13,
+          "baix": 18,
           "mitja": 6,
           "alt": 1,
           "informat": 28
         },
-        "total_criteris": 48
+        "total_criteris": 53
       },
       "num_no_compleix": 2
     },
@@ -372,66 +372,66 @@
       "resum": {
         "per_resultat": {
           "no_compleix": 3,
-          "compleix": 17,
+          "compleix": 22,
           "sense_dades": 28
         },
         "per_nivell_risc": {
           "alt": 3,
-          "baix": 13,
+          "baix": 18,
           "mitja": 4,
           "informat": 28
         },
-        "total_criteris": 48
+        "total_criteris": 53
       },
       "num_no_compleix": 3
     },
     "màrqueting": {
       "resum": {
         "per_resultat": {
-          "compleix": 19,
+          "compleix": 24,
           "no_compleix": 2,
           "sense_dades": 28
         },
         "per_nivell_risc": {
-          "baix": 14,
+          "baix": 19,
           "mitja": 6,
           "alt": 1,
           "informat": 28
         },
-        "total_criteris": 49
+        "total_criteris": 54
       },
       "num_no_compleix": 2
     },
     "salut_laboral": {
       "resum": {
         "per_resultat": {
-          "compleix": 18,
+          "compleix": 23,
           "no_compleix": 8,
           "sense_dades": 25
         },
         "per_nivell_risc": {
-          "baix": 13,
+          "baix": 18,
           "mitja": 6,
           "alt": 7,
           "informat": 25
         },
-        "total_criteris": 51
+        "total_criteris": 56
       },
       "num_no_compleix": 8
     },
     "treballadors": {
       "resum": {
         "per_resultat": {
-          "compleix": 25,
+          "compleix": 30,
           "sense_dades": 23
         },
         "per_nivell_risc": {
-          "baix": 15,
+          "baix": 20,
           "mitja": 6,
           "alt": 4,
           "informat": 23
         },
-        "total_criteris": 48
+        "total_criteris": 53
       },
       "num_no_compleix": 0
     }

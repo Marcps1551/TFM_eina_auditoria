@@ -109,6 +109,30 @@ MAPA_RECOMANACIONS: dict[str, list[dict]] = {
             "referencia": "RGPD art. 5.2; bones pràctiques.",
         },
     ],
+    "RGPD_FORMACIO_OBLIGATORIA": [
+        {
+            "titol": "Implantar formació obligatòria en protecció de dades",
+            "descripcio": "El personal que tracta dades personals ha de conèixer les obligacions de privacitat i seguretat aplicables.",
+            "accions": [
+                "Definir un pla de formació inicial i de reciclatge en RGPD i bones pràctiques de seguretat.",
+                "Documentar l'assistència i el contingut de la formació per a qui accedeix a dades personals.",
+                "Incloure la formació com a mesura de seguretat als tractaments rellevants del registre d'activitats.",
+            ],
+            "referencia": "RGPD art. 32; art. 39.",
+        },
+    ],
+    "RGPD_CONFIDENCIALITAT_CONTRACTUAL": [
+        {
+            "titol": "Garantir confidencialitat contractual",
+            "descripcio": "Qui accedeix a dades personals ha d'estar subjecte a un deure de confidencialitat.",
+            "accions": [
+                "Incloure clàusules de confidencialitat als contractes laborals i amb encarregats del tractament.",
+                "Documentar acords de confidencialitat amb personal intern i extern amb accés a dades.",
+                "Revisar periòdicament que els acords estiguin vigents i signats.",
+            ],
+            "referencia": "RGPD art. 32.4; art. 28.",
+        },
+    ],
     "RGPD_ART37_DPO": [
         {
             "titol": "Revisar la necessitat de designar un DPO",

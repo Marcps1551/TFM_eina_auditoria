@@ -2,16 +2,16 @@
   "fitxer_entrada": "17_sense_dpo_tots.json",
   "resum": {
     "per_resultat": {
-      "compleix": 21,
+      "compleix": 29,
       "no_compleix": 3,
       "sense_dades": 29
     },
     "per_nivell_risc": {
-      "baix": 17,
+      "baix": 25,
       "mitja": 7,
       "informat": 29
     },
-    "total_criteris": 53
+    "total_criteris": 61
   },
   "num_riscos": 3,
   "num_recomanacions": 3,
@@ -299,32 +299,32 @@
     "màrqueting": {
       "resum": {
         "per_resultat": {
-          "compleix": 17,
+          "compleix": 22,
           "no_compleix": 2,
           "sense_dades": 29
         },
         "per_nivell_risc": {
-          "baix": 13,
+          "baix": 18,
           "mitja": 6,
           "informat": 29
         },
-        "total_criteris": 48
+        "total_criteris": 53
       },
       "num_no_compleix": 2
     },
     "treballadors": {
       "resum": {
         "per_resultat": {
-          "compleix": 17,
+          "compleix": 22,
           "no_compleix": 2,
           "sense_dades": 29
         },
         "per_nivell_risc": {
-          "baix": 13,
+          "baix": 18,
           "mitja": 6,
           "informat": 29
         },
-        "total_criteris": 48
+        "total_criteris": 53
       },
       "num_no_compleix": 2
     }

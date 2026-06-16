@@ -2,16 +2,16 @@
   "fitxer_entrada": "19_transferencies_sense_garanties.json",
   "resum": {
     "per_resultat": {
-      "compleix": 18,
+      "compleix": 23,
       "no_compleix": 2,
       "sense_dades": 29
     },
     "per_nivell_risc": {
-      "baix": 14,
+      "baix": 19,
       "mitja": 6,
       "informat": 29
     },
-    "total_criteris": 49
+    "total_criteris": 54
   },
   "num_riscos": 2,
   "num_recomanacions": 2,
@@ -285,16 +285,16 @@
     "màrqueting": {
       "resum": {
         "per_resultat": {
-          "compleix": 18,
+          "compleix": 23,
           "no_compleix": 2,
           "sense_dades": 29
         },
         "per_nivell_risc": {
-          "baix": 14,
+          "baix": 19,
           "mitja": 6,
           "informat": 29
         },
-        "total_criteris": 49
+        "total_criteris": 54
       },
       "num_no_compleix": 2
     }

@@ -2,17 +2,17 @@
   "fitxer_entrada": "29_categories_sensibles_inconsistent.json",
   "resum": {
     "per_resultat": {
-      "compleix": 19,
+      "compleix": 24,
       "sense_dades": 28,
       "no_compleix": 2
     },
     "per_nivell_risc": {
-      "baix": 15,
+      "baix": 20,
       "mitja": 4,
       "informat": 28,
       "alt": 2
     },
-    "total_criteris": 49
+    "total_criteris": 54
   },
   "num_riscos": 2,
   "num_recomanacions": 2,
@@ -278,17 +278,17 @@
     "videovigilància": {
       "resum": {
         "per_resultat": {
-          "compleix": 19,
+          "compleix": 24,
           "sense_dades": 28,
           "no_compleix": 2
         },
         "per_nivell_risc": {
-          "baix": 15,
+          "baix": 20,
           "mitja": 4,
           "informat": 28,
           "alt": 2
         },
-        "total_criteris": 49
+        "total_criteris": 54
       },
       "num_no_compleix": 2
     }

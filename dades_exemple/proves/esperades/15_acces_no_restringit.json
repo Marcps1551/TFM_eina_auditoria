@@ -2,25 +2,33 @@
   "fitxer_entrada": "15_acces_no_restringit.json",
   "resum": {
     "per_resultat": {
-      "compleix": 18,
-      "no_compleix": 1,
+      "compleix": 20,
+      "no_compleix": 2,
       "sense_dades": 29
     },
     "per_nivell_risc": {
-      "baix": 14,
-      "mitja": 5,
+      "baix": 16,
+      "mitja": 6,
       "informat": 29
     },
-    "total_criteris": 48
+    "total_criteris": 51
   },
-  "num_riscos": 1,
-  "num_recomanacions": 1,
+  "num_riscos": 2,
+  "num_recomanacions": 2,
   "findings_no_compleix": [
     {
       "criteri_id": "RGPD_ACCES_RESTRINGIT",
       "resultat": "no_compleix",
       "nivell_risc": "mitja",
-      "descripcio": "L'accés a les dades no consta restringit per rol. Cal limitar l'accés al personal autoritzat (RGPD art. 32.4).",
+      "descripcio": "No consta accés restringit per rol a la configuració global ni documentat en cap tractament. Cal limitar l'accés al personal autoritzat (RGPD art. 32.4).",
+      "tractament_id": null,
+      "tractament_nom": null
+    },
+    {
+      "criteri_id": "RGPD_FORMACIO_OBLIGATORIA",
+      "resultat": "no_compleix",
+      "nivell_risc": "mitja",
+      "descripcio": "No consta formació del personal a nivell organitzatiu ni documentada en cap tractament. Cal formar qui tracta dades personals (RGPD art. 32).",
       "tractament_id": null,
       "tractament_nom": null
     }
@@ -261,8 +269,14 @@
   ],
   "riscos": [
     {
-      "id": "R_RGPD_ACCES_RESTRINGIT",
+      "id": "R_RGPD_ACCES_RESTRINGIT_0",
       "titol": "No compliment: Control d'accés per rol",
+      "nivell": "mitja",
+      "tractament_id": null
+    },
+    {
+      "id": "R_RGPD_FORMACIO_OBLIGATORIA_1",
+      "titol": "No compliment: Formació obligatòria",
       "nivell": "mitja",
       "tractament_id": null
     }
@@ -271,18 +285,18 @@
     "intern": {
       "resum": {
         "per_resultat": {
-          "compleix": 18,
-          "no_compleix": 1,
+          "compleix": 20,
+          "no_compleix": 2,
           "sense_dades": 29
         },
         "per_nivell_risc": {
-          "baix": 14,
-          "mitja": 5,
+          "baix": 16,
+          "mitja": 6,
           "informat": 29
         },
-        "total_criteris": 48
+        "total_criteris": 51
       },
-      "num_no_compleix": 1
+      "num_no_compleix": 2
     }
   }
 }

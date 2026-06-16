@@ -2,16 +2,16 @@
   "fitxer_entrada": "25_checklist_compleix.json",
   "resum": {
     "per_resultat": {
-      "compleix": 25,
+      "compleix": 30,
       "sense_dades": 23
     },
     "per_nivell_risc": {
-      "baix": 15,
+      "baix": 20,
       "mitja": 4,
       "alt": 6,
       "informat": 23
     },
-    "total_criteris": 48
+    "total_criteris": 53
   },
   "num_riscos": 0,
   "num_recomanacions": 0,
@@ -207,16 +207,16 @@
     "màrqueting": {
       "resum": {
         "per_resultat": {
-          "compleix": 25,
+          "compleix": 30,
           "sense_dades": 23
         },
         "per_nivell_risc": {
-          "baix": 15,
+          "baix": 20,
           "mitja": 4,
           "alt": 6,
           "informat": 23
         },
-        "total_criteris": 48
+        "total_criteris": 53
       },
       "num_no_compleix": 0
     }

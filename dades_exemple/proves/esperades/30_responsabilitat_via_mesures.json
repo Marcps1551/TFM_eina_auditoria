@@ -2,17 +2,17 @@
   "fitxer_entrada": "30_responsabilitat_via_mesures.json",
   "resum": {
     "per_resultat": {
-      "compleix": 21,
+      "compleix": 26,
       "no_compleix": 1,
       "sense_dades": 26
     },
     "per_nivell_risc": {
-      "baix": 14,
+      "baix": 19,
       "mitja": 6,
       "informat": 26,
       "alt": 2
     },
-    "total_criteris": 48
+    "total_criteris": 53
   },
   "num_riscos": 1,
   "num_recomanacions": 1,
@@ -248,17 +248,17 @@
     "intern": {
       "resum": {
         "per_resultat": {
-          "compleix": 21,
+          "compleix": 26,
           "no_compleix": 1,
           "sense_dades": 26
         },
         "per_nivell_risc": {
-          "baix": 14,
+          "baix": 19,
           "mitja": 6,
           "informat": 26,
           "alt": 2
         },
-        "total_criteris": 48
+        "total_criteris": 53
       },
       "num_no_compleix": 1
     }

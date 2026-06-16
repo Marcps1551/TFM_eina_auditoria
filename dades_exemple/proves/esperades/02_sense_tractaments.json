@@ -2,14 +2,14 @@
   "fitxer_entrada": "02_sense_tractaments.json",
   "resum": {
     "per_resultat": {
-      "sense_dades": 39,
-      "compleix": 4
+      "sense_dades": 42,
+      "compleix": 3
     },
     "per_nivell_risc": {
-      "informat": 39,
-      "baix": 4
+      "informat": 42,
+      "baix": 3
     },
-    "total_criteris": 43
+    "total_criteris": 45
   },
   "num_riscos": 0,
   "num_recomanacions": 0,
@@ -49,6 +49,30 @@
     },
     {
       "criteri_id": "RGPD_ART32_MESURES",
+      "resultat": "sense_dades",
+      "nivell_risc": "informat",
+      "descripcio": "No s'han declarat tractaments.",
+      "tractament_id": null,
+      "tractament_nom": null
+    },
+    {
+      "criteri_id": "RGPD_ACCES_RESTRINGIT",
+      "resultat": "sense_dades",
+      "nivell_risc": "informat",
+      "descripcio": "No s'han declarat tractaments.",
+      "tractament_id": null,
+      "tractament_nom": null
+    },
+    {
+      "criteri_id": "RGPD_FORMACIO_OBLIGATORIA",
+      "resultat": "sense_dades",
+      "nivell_risc": "informat",
+      "descripcio": "No s'han declarat tractaments.",
+      "tractament_id": null,
+      "tractament_nom": null
+    },
+    {
+      "criteri_id": "RGPD_CONFIDENCIALITAT_CONTRACTUAL",
       "resultat": "sense_dades",
       "nivell_risc": "informat",
       "descripcio": "No s'han declarat tractaments.",
@@ -333,14 +357,14 @@
     "General": {
       "resum": {
         "per_resultat": {
-          "sense_dades": 39,
-          "compleix": 4
+          "sense_dades": 42,
+          "compleix": 3
         },
         "per_nivell_risc": {
-          "informat": 39,
-          "baix": 4
+          "informat": 42,
+          "baix": 3
         },
-        "total_criteris": 43
+        "total_criteris": 45
       },
       "num_no_compleix": 0
     }

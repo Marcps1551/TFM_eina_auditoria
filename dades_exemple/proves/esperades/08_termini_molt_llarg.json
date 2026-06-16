@@ -2,15 +2,15 @@
   "fitxer_entrada": "08_termini_molt_llarg.json",
   "resum": {
     "per_resultat": {
-      "compleix": 19,
+      "compleix": 24,
       "sense_dades": 31
     },
     "per_nivell_risc": {
-      "baix": 15,
+      "baix": 20,
       "informat": 31,
       "mitja": 4
     },
-    "total_criteris": 50
+    "total_criteris": 55
   },
   "num_riscos": 0,
   "num_recomanacions": 2,
@@ -270,15 +270,15 @@
     "comptabilitat": {
       "resum": {
         "per_resultat": {
-          "compleix": 19,
+          "compleix": 24,
           "sense_dades": 31
         },
         "per_nivell_risc": {
-          "baix": 15,
+          "baix": 20,
           "informat": 31,
           "mitja": 4
         },
-        "total_criteris": 50
+        "total_criteris": 55
       },
       "num_no_compleix": 0
     }

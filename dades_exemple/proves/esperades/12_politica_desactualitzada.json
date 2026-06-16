@@ -2,16 +2,16 @@
   "fitxer_entrada": "12_politica_desactualitzada.json",
   "resum": {
     "per_resultat": {
-      "compleix": 18,
+      "compleix": 23,
       "no_compleix": 1,
       "sense_dades": 29
     },
     "per_nivell_risc": {
-      "baix": 15,
+      "baix": 20,
       "mitja": 4,
       "informat": 29
     },
-    "total_criteris": 48
+    "total_criteris": 53
   },
   "num_riscos": 1,
   "num_recomanacions": 1,
@@ -271,16 +271,16 @@
     "proveïdors": {
       "resum": {
         "per_resultat": {
-          "compleix": 18,
+          "compleix": 23,
           "no_compleix": 1,
           "sense_dades": 29
         },
         "per_nivell_risc": {
-          "baix": 15,
+          "baix": 20,
           "mitja": 4,
           "informat": 29
         },
-        "total_criteris": 48
+        "total_criteris": 53
       },
       "num_no_compleix": 1
     }

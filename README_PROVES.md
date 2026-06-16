@@ -180,8 +180,8 @@ Cada fitxer a `esperades/` conté:
 |-------|----------|----------|
 | 13 | `mesures_seguretat: []` | NO_COMPLEIX (criteri automàtic + checklist) |
 | 14 | Mesures sense xifrat per NIF | COMPLEIX (*) — només presència |
-| 15 | `acces_restringit_per_rol: false` | NO_COMPLEIX |
-| 28 | Accés via mesura `acces_restringit_rol` al tractament | COMPLEIX (malgrat config global false) |
+| 15 | `acces_restringit_per_rol: false` i sense mesura al tractament | NO_COMPLEIX **per tractament** (T001) |
+| 28 | Accés via mesura `acces_restringit_rol` al tractament (global false) | COMPLEIX **per aquell tractament** |
 
 ---
 

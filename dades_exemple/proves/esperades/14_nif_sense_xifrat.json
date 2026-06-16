@@ -2,15 +2,15 @@
   "fitxer_entrada": "14_nif_sense_xifrat.json",
   "resum": {
     "per_resultat": {
-      "compleix": 19,
+      "compleix": 24,
       "sense_dades": 29
     },
     "per_nivell_risc": {
-      "baix": 15,
+      "baix": 20,
       "mitja": 4,
       "informat": 29
     },
-    "total_criteris": 48
+    "total_criteris": 53
   },
   "num_riscos": 0,
   "num_recomanacions": 0,
@@ -254,15 +254,15 @@
     "clients": {
       "resum": {
         "per_resultat": {
-          "compleix": 19,
+          "compleix": 24,
           "sense_dades": 29
         },
         "per_nivell_risc": {
-          "baix": 15,
+          "baix": 20,
           "mitja": 4,
           "informat": 29
         },
-        "total_criteris": 48
+        "total_criteris": 53
       },
       "num_no_compleix": 0
     }

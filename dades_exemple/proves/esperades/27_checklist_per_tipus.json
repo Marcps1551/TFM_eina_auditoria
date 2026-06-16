@@ -2,16 +2,16 @@
   "fitxer_entrada": "27_checklist_per_tipus.json",
   "resum": {
     "per_resultat": {
-      "compleix": 29,
+      "compleix": 37,
       "sense_dades": 24
     },
     "per_nivell_risc": {
-      "baix": 20,
+      "baix": 28,
       "mitja": 6,
       "informat": 24,
       "alt": 3
     },
-    "total_criteris": 53
+    "total_criteris": 61
   },
   "num_riscos": 0,
   "num_recomanacions": 0,
@@ -215,33 +215,33 @@
     "curriculums": {
       "resum": {
         "per_resultat": {
-          "compleix": 20,
+          "compleix": 25,
           "sense_dades": 26,
           "no_compleix": 2
         },
         "per_nivell_risc": {
-          "baix": 15,
+          "baix": 20,
           "mitja": 5,
           "informat": 26,
           "alt": 2
         },
-        "total_criteris": 48
+        "total_criteris": 53
       },
       "num_no_compleix": 2
     },
     "treballadors": {
       "resum": {
         "per_resultat": {
-          "compleix": 24,
+          "compleix": 29,
           "sense_dades": 24
         },
         "per_nivell_risc": {
-          "baix": 15,
+          "baix": 20,
           "mitja": 6,
           "informat": 24,
           "alt": 3
         },
-        "total_criteris": 48
+        "total_criteris": 53
       },
       "num_no_compleix": 0
     }
